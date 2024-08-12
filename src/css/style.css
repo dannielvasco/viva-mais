@@ -162,8 +162,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 0 230px;
-    height: fit-content;
+    position: absolute;
     height: 40px;
     border-bottom-left-radius: 15px;
     border-top-right-radius: 15px;

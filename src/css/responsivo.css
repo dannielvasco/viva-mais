@@ -205,7 +205,9 @@
         gap: 10px;
         width: 20%;
         margin: auto auto;
+        margin-right: 20rem;
         justify-content: center;
+        text-align: center;
     }
 
     .top-navbar .phone-navbar,
@@ -509,6 +511,7 @@
     .top-navbar .ícones-navbar {
         width: 25%;
         padding: 0;
+        margin-right: 15rem;
     }
 
     .img-h-0,
@@ -596,7 +599,7 @@
     .top-navbar {
         display: flex;
         align-items: center;
-        padding: 15px;
+        padding: 1rem;
     }
 
     .top-navbar .phone-navbar {
@@ -615,6 +618,9 @@
     .header .headline {
         text-align: center;
         font-size: small;
+        display: flex;
+        align-items: center;
+        margin: auto auto;
     }
 
     .header h4 {
