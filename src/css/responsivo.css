@@ -602,6 +602,10 @@
         padding: 1rem;
     }
 
+    #top-navbar {
+        padding: 1.4rem;
+    }
+
     .top-navbar .phone-navbar {
         margin: 0;
     }
@@ -990,6 +994,15 @@
 
 @media (max-width: 375px) {
 
+    .top-navbar {
+        padding: 1rem;
+    }
+
+    #top-navbar {
+        /* POR QUE? */
+        padding: 1.14rem;
+    }
+
     .intro #inside {
         padding: 0;
         background-color: transparent;
@@ -1010,8 +1023,8 @@
 
     #ar-livre .img-container img {
         border-radius: 15px;
-        border-start-start-radius:  0;
-        border-start-end-radius:  0;
+        border-start-start-radius: 0;
+        border-start-end-radius: 0;
     }
 
     #ar-livre p {
@@ -1178,6 +1191,11 @@
 @media (max-width: 320px) {
     .top-navbar {
         gap: 2rem;
+        padding: 1rem;
+    }
+
+    #top-navbar {
+        padding: 1rem;
     }
 
     .header .headline {
