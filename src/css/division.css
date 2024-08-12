@@ -1,0 +1,39 @@
+
+
+.division-full {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+    margin: auto auto;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+#span-sec {
+    display: flex;
+}
+
+.span-line span {
+    width: 12em;
+    border: 1px solid #98ff98;
+    border-radius: 9999px;
+    display: flex;
+    margin: auto auto;
+}
+
+.span-sec {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.span-sec span {
+    border: 1px solid #98ff98;
+    width: 1em;
+    rotate: 45deg;
+    margin: auto auto;
+    text-align: center;
+}

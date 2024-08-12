@@ -1,0 +1,1326 @@
+/* 2xl */
+@media (max-width: 1536px) {
+    .container {
+        margin: auto auto;
+        width: 100%;
+    }
+
+    .hamburger-menu,
+    .sidebar {
+        display: none;
+    }
+
+    .top-navbar .top-logo-content {
+        display: none;
+    }
+
+    .top-navbar .ícones-navbar {
+        margin-right: 50px;
+        gap: 10px;
+        width: 12%;
+    }
+
+    .top-navbar {
+        padding: 0;
+    }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+
+    .left-content p {
+        width: 60%;
+    }
+
+    .left-content h2 {
+        margin: 0 auto 0 auto;
+    }
+
+    .right-content img {
+        width: 140px;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto auto;
+        box-shadow: none;
+    }
+
+    .right-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: auto auto;
+        gap: 40px;
+    }
+
+
+    .recomendacoes ol img {
+        margin-left: 75px;
+    }
+
+    .ar-livre p {
+        text-align: left;
+    }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+
+    .top-navbar .ícones-navbar {
+        margin-right: 50px;
+        gap: 10px;
+        width: 15%;
+    }
+
+    .top-navbar .phone-navbar {
+        margin-left: 115px;
+    }
+
+    .navbar .logo-content {
+        margin-left: 80px;
+    }
+
+    .navbar .menu {
+        gap: 10px;
+        margin-right: 10px;
+    }
+
+    .header .headline {
+        width: 90%;
+    }
+
+    .left-content p {
+        margin-left: auto;
+    }
+
+    .right-content img {
+        width: 25%;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto auto;
+    }
+
+    .right-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: auto auto;
+        gap: 10px;
+    }
+
+
+    .right-content img:hover {
+        transform: scale(1.1);
+    }
+
+    .img-pos {
+        top: 0;
+        left: 0;
+    }
+
+    .cuidados h2,
+    .ar-livre h2,
+    #mental h2,
+    #mental-pos h2 {
+        text-align: center;
+        border-bottom: 4px solid #98FF98;
+        border-left: none;
+        width: fit-content;
+        margin: auto auto;
+        border-right: none;
+    }
+
+    #mental-pos .rodape h2 {
+        margin-bottom: 2rem;
+    }
+
+    .ar-livre h2 {
+        margin-top: 10rem;
+    }
+
+    .cuidados img,
+    .ar-livre img,
+    #mental img,
+    #mental-pos img {
+        display: block;
+        text-align: center;
+        float: none;
+        margin: auto auto;
+        width: 580px;
+        margin-bottom: 5rem;
+    }
+
+
+    .cuidados p,
+    .ar-livre p,
+    #mental p,
+    #mental-pos p {
+        text-align: center;
+    }
+
+    .recomendacoes ol li {
+        text-align: center;
+    }
+
+    .recomendacoes ol img {
+        display: flex;
+        justify-content: center;
+        float: none;
+        margin: auto auto;
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .recomendacoes .top-text {
+        padding: 2px;
+    }
+
+    .ol-classificacoes .asterisk {
+        display: none;
+    }
+
+    #imc {
+        margin: 100px 25px 50px 25px;
+    }
+
+    #imc .main-section {
+        margin: 2.5rem 1.25rem;
+    }
+}
+
+/* md */
+@media (max-width: 768px) {
+
+    .ditados,
+    .asterisk-back-space {
+        display: none;
+    }
+
+    #ditados,
+    .material-symbols-outlined.asterisk,
+    #asterisk-back-space {
+        display: none;
+    }
+
+    .top-navbar .ícones-navbar {
+        gap: 10px;
+        width: 20%;
+        margin: auto auto;
+        justify-content: center;
+    }
+
+    .top-navbar .phone-navbar,
+    .phone-txt {
+        margin-left: 40px;
+        display: none;
+    }
+
+    .hamburger-menu,
+    .sidebar {
+        display: flex;
+    }
+
+    .top-navbar .top-logo-content {
+        display: flex;
+        right: 0;
+        margin-right: 0.5rem;
+    }
+
+    .top-navbar .top-logo h1 {
+        font-size: 22px;
+        transition: 0.3s;
+    }
+
+    .top-navbar .top-img-logo {
+        width: 48.4px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+
+    .top-navbar,
+    .navbar {
+        margin: 0;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar .logo-content {
+        margin: 0 auto;
+    }
+
+    .navbar .logo h1 {
+        border-bottom: 4px solid #68FF98;
+
+    }
+
+    .navbar .menu {
+        justify-content: center;
+        gap: 20px;
+        flex-direction: row;
+        margin: 200px auto 0 auto;
+        display: none;
+    }
+
+    .header {
+        height: 500px;
+        margin-top: 0;
+    }
+
+    .img-h-0,
+    .img-h-3,
+    .img-h-4 {
+        height: 500px;
+    }
+
+    .header {
+        height: 300px;
+    }
+
+    #slider {
+        max-height: 300px;
+    }
+
+    .header .headline {
+        width: 90%;
+    }
+
+    .left-content p {
+        text-align: left;
+    }
+
+    .left-content {
+        height: 100%;
+        margin: auto auto;
+    }
+
+    .left-column:hover h2 {
+        transform: scale(1.025);
+    }
+
+    .left-column:hover p {
+        transform: scale(1.025);
+    }
+
+    .column {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .right-content img {
+        width: 120px;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto auto;
+        box-shadow: none;
+    }
+
+    .right-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: auto auto;
+        gap: 20px;
+    }
+
+    .right-content .fruta-content {
+        flex: 33, 3%;
+    }
+
+    .right-content .body-building-content {
+        flex: 33, 3%;
+    }
+
+    .right-content .corredor {
+        flex: 33, 3%;
+    }
+
+    .right-content img:hover {
+        transform: scale(1.1);
+    }
+
+    .cuidados-inside,
+    .ar-livre-inside,
+    #mental .mental-inside,
+    #mental-pos .mental-pos-inside {
+        margin: 50px 78.5px;
+    }
+
+    #rodape {
+        margin-inline: 78.5px;
+    }
+
+    #mental-pos .mental-pos-inside {
+        margin: 50px 78.5px 0 78.5px;
+    }
+
+    .p-excess {
+        display: none;
+    }
+
+    .cuidados .img-middle,
+    .ar-livre .img-middle,
+    #mental #img-middle,
+    #mental-pos #img-middle {
+        display: block;
+        margin: auto auto 50px auto;
+    }
+
+    .cuidados .img-top,
+    .ar-livre .img-top,
+    #mental .img-top,
+    #mental-pos .img-top {
+        display: none;
+    }
+
+    .cuidados-inside,
+    .ar-livre-inside,
+    #mental .mental-inside,
+    #mental-pos .mental-pos-inside {
+        text-align: center;
+    }
+
+    .recomendacoes .rec-img-txt {
+        height: 30rem;
+    }
+
+    .recomendacoes .top-text {
+        height: 75%;
+        padding: 15px;
+    }
+
+    .recomendacoes p {
+        width: 100%;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .alimentacao-text p .img-middle,
+    .alimentacao-text p .bottom-img,
+    .alimentacao-text p .img-top {
+        /* display: block; */
+        text-align: center;
+        float: none;
+        margin: 5rem auto 0 auto;
+        display: flex;
+        float: none;
+        margin: auto auto;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .exercicios-text p .img-top,
+    .bem-estar-text p .img-top {
+        display: none;
+    }
+
+    .exercicios-text p .img-middle,
+    .exercicios-text p .bottom-img {
+        /* display: block; */
+        text-align: center;
+        float: none;
+        margin: 5rem auto 0 auto;
+        display: flex;
+        float: none;
+        margin: auto auto;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .exercicios-text p .bottom-img {
+        margin-bottom: 2.5rem;
+    }
+
+    .exercicios-text p .img-middle {
+        margin: 5rem auto 2.5rem auto;
+    }
+
+    .alimentacao-text p .img-middle,
+    .alimentacao-text p .img-top,
+    .alimentacao-text p .bottom-img {
+        margin-bottom: 2.5rem;
+    }
+
+    .alimentacao-text p,
+    .exercicios-text p,
+    .bem-estar-text p {
+        text-align: center;
+    }
+
+    .bem-estar-text p .img-middle,
+    .bem-estar-text p .bottom-img {
+        text-align: center;
+        float: none;
+        margin: 2.5rem auto 5rem auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #imc .historico-ultimo,
+    .historico-all-title {
+        margin-top: 5rem;
+    }
+
+    #imc #toggleButton {
+        margin-top: 3.5rem;
+    }
+
+    #imc .sem-dados {
+        margin: 3rem auto auto auto;
+        text-align: center;
+    }
+
+    #imc .modificacoes {
+        margin: 3rem auto auto auto;
+        text-align: center;
+    }
+
+    #imc .historico-all-title {
+        display: block;
+    }
+
+    #imc .division-full {
+        display: none;
+    }
+
+    #imc .main-section .forms {
+        display: block;
+    }
+
+    #imc .main-section .resultado {
+        width: 100%;
+    }
+}
+
+/* sm */
+@media (max-width: 640px) {
+    .division-full {
+        display: flex;
+    }
+
+    .top-navbar {
+        padding: 5px;
+    }
+
+    .top-navbar .ícones-navbar {
+        width: 25%;
+        padding: 0;
+    }
+
+    .img-h-0,
+    .img-h-1,
+    .img-h-2,
+    .img-h-3,
+    .img-h-4 {
+        height: 505px;
+    }
+
+    .left-content p {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .left-content {
+        height: 100%;
+        margin: auto auto;
+    }
+
+
+    .cuidados h2,
+    .ar-livre h2,
+    #mental h2,
+    #mental-pos h2 {
+        width: 75%;
+        margin-bottom: 5rem;
+    }
+
+    .cuidados h2,
+    #mental h2 {
+        margin-top: 5rem;
+    }
+
+    .cuidados-content,
+    #mental .mental-content {
+        margin-bottom: 10rem;
+    }
+
+    .cuidados-inside,
+    .ar-livre-inside,
+    #mental .mental-inside,
+    #mental-pos .mental-pos-inside {
+        margin: 25px 39.25px;
+    }
+
+    #rodape {
+        margin-inline: 39.25px
+    }
+
+    .recomendacoes .rec-img-txt {
+        height: 33rem;
+    }
+
+    .recomendacoes ol li {
+        margin-top: 5rem;
+    }
+
+    #imc {
+        margin: 250px 12.5px 0 12.5px;
+    }
+
+    #imc .top-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .ol-classificacoes u {
+        border: none;
+    }
+
+
+
+}
+
+/* xs */
+@media (max-width: 425px) {
+    .container {
+        overflow: hidden;
+    }
+
+    .top-navbar .ícones-navbar {
+        visibility: hidden;
+    }
+
+    .top-navbar {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .top-navbar .phone-navbar {
+        margin: 0;
+    }
+
+    .top-navbar,
+    .navbar {
+        margin: 0;
+    }
+
+    .header {
+        height: 65%;
+    }
+
+    .header .headline {
+        text-align: center;
+        font-size: small;
+    }
+
+    .header h4 {
+        font-size: larger;
+    }
+
+    .img-h-0,
+    .img-h-1,
+    .img-h-2,
+    .img-h-3,
+    .img-h-4 {
+        height: 328.25px;
+    }
+
+    .left-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left-content h2 {
+        text-align: left;
+        margin-left: 0;
+
+    }
+
+    .left-content p {
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .left-column:hover h2 {
+        transform: scale(1);
+    }
+
+    .left-column:hover p {
+        transform: scale(1);
+    }
+
+    .right-content img {
+        width: 120px;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px auto;
+        box-shadow: none;
+    }
+
+    .right-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: auto auto;
+        gap: 20px;
+    }
+
+    .ar-livre h2 {
+        width: 75%;
+    }
+
+    .ar-livre p,
+    .cuidados p {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    .ar-livre h2 {
+        margin-top: 0;
+    }
+
+    .p-excess,
+    .p-extra-excess {
+        display: none;
+    }
+
+    .cuidados-inside,
+    .ar-livre-inside,
+    #mental .mental-inside,
+    #mental-pos .mental-pos-inside {
+        margin: 12.5px 0;
+        border-radius: 10px;
+    }
+
+    #rodape {
+        margin-inline: 1rem;
+    }
+
+    .recomendacoes .rec-img-txt {
+        height: 50rem;
+    }
+
+    .recomendacoes .top-text {
+        max-height: 50%;
+
+    }
+
+    .recomendacoes ol {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .dicas .alimentacao,
+    .exercicios,
+    .bem-estar,
+    #imc {
+        margin: 10rem 0;
+        border-top: 4px solid white;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        width: 100%;
+    }
+
+    .dicas,
+    #finale {
+        border-left: none;
+        border-right: none;
+    }
+
+    .dicas .top-text,
+    #imc .top-text {
+        border-radius: 15px;
+    }
+
+
+    .alimentacao-text p,
+    .exercicios-text p,
+    .bem-estar-text p,
+    #imc .imc-text p {
+        text-align: center;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+    }
+
+    #imc {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 50px;
+        border: transparent;
+        border-top: 4px solid white;
+    }
+
+    /* 
+    #imc .imc-text .u-classificacoes {
+        text-align: center;
+        line-height: 2rem;
+    } */
+
+    #imc #main-section {
+        margin-inline: auto;
+        width: 90%;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    #imc .main-section .forms {
+        background-color: transparent;
+    }
+
+    .imc-text .classificacoes {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .classificacoes .ol-classificacoes {
+        width: 100%;
+        margin: 6rem auto;
+    }
+
+
+    #imc .main-section {
+        margin-left: 0;
+        margin-right: 0;
+        padding-inline: 0;
+        border-radius: 0%;
+    }
+
+    #imc #calcular-imc label {
+        padding: 1rem;
+    }
+
+    #imc .main-section .forms {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 2rem;
+        padding: 0;
+    }
+
+    #imc #calcular-imc {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 15px;
+        border-left: none;
+        background-color: #313238;
+        height: 100%;
+
+    }
+
+    #imc .main-section .resultado {
+        border: 2px solid white;
+    }
+
+    #imc .resultado-do-imc {
+        font-size: 2rem;
+    }
+
+    #imc .enviar {
+        margin-top: 4rem;
+    }
+
+    #imc .modificacoes {
+        width: 75%;
+        text-align: center;
+    }
+
+    #imc .delete-button {
+        margin: auto auto;
+    }
+
+    #imc .historico-ultimo.denovo {
+        display: block;
+        margin: auto 2rem;
+    }
+
+    .top-navbar {
+        justify-content: center;
+    }
+
+    .header .headline {
+        height: 30%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .header .headline h2 {
+        border-bottom: 0px;
+    }
+
+    .header .headline h4 {
+        display: none;
+    }
+
+    .cuidados .cuidados-content .cuidados-inside,
+    .ar-livre-inside,
+    #mental .mental-inside,
+    #mental-pos .mental-pos-inside {
+        font-size: 1.12rem;
+        margin-inline: 1rem;
+        text-align: center;
+    }
+
+    #img-show,
+    #img-pos,
+    #img-middle {
+        border-radius: 0;
+        border: 4px solid #78FF98;
+    }
+
+    .recomendacoes .top-text {
+        height: 50%;
+    }
+
+    .recomendacoes {
+        margin-top: 125px;
+    }
+
+    .recomendacoes .top-img {
+        height: 75%;
+    }
+
+    .recomendacoes .top-text h1 {
+        font-size: 2rem;
+    }
+
+    .recomendacoes .top-text p {
+        height: fit-content;
+        font-size: 1rem;
+    }
+
+    .recomendacoes ol {
+        margin-inline: 1rem;
+        width: fit-content;
+    }
+
+    .recomendacoes ol li {
+        font-size: 1.12rem;
+    }
+
+    .rec-img-txt .top-text {
+        height: 75%;
+    }
+
+    .rec-img-txt .top-text h4 {
+        font-size: 1.25rem;
+    }
+
+    .rec-img-txt .top-text h2 {
+        font-size: 1.75rem;
+    }
+
+    .dicas .alimentacao,
+    .exercicios,
+    .bem-estar,
+    #imc {
+        margin-inline: 1rem;
+        width: fit-content;
+        text-align: center;
+        border: 3px solid white;
+        border-radius: 0px;
+    }
+
+    .alimentacao-text p,
+    .exercicios-text p,
+    .bem-estar-text p,
+    #mental p,
+    #mental-pos p,
+    #imc .imc-text p {
+        margin-inline: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+        width: fit-content;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .dicas .alimentacao .top-text,
+    .exercicios .top-text,
+    .bem-estar .top-text {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    #imc .top-text {
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #img-dicas {
+        border-radius: 5px;
+    }
+
+    #credits-links h2 {
+        margin-inline: 0;
+    }
+
+    #credits-links li {
+        margin-inline: 0;
+    }
+
+    #dicas .rec-img-txt .top-img,
+    #imc .rec-img-txt .top-img {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .intro #inside {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .intro #inside p {
+        background-color: #313238;
+        padding: 15px;
+    }
+
+    .intro #inside img:hover {
+        transform: scale(1.0);
+    }
+
+    #ar-livre .img-container {
+        margin-top: 3rem;
+    }
+
+    #ar-livre .img-container img {
+        border-radius: 15px;
+        border-start-start-radius:  0;
+        border-start-end-radius:  0;
+    }
+
+    #ar-livre p {
+        border-radius: 15px;
+        border-end-end-radius: 0;
+        border-end-start-radius: 0;
+    }
+
+    #mental-inside {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    #mental-inside img:hover {
+        transform: scale(1.0);
+    }
+
+    #mental-inside p {
+        margin-bottom: 2rem;
+        margin-inline: auto;
+        background-color: #313238;
+        padding: 15px;
+    }
+
+    .mental-container #inside {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .mental-container #inside img:hover {
+        transform: scale(1.0);
+    }
+
+    .mental-container #inside p {
+        background-color: #313238;
+        padding: 15px;
+        margin-inline: auto;
+        margin-block: auto;
+        padding-block: auto;
+    }
+
+    br {
+        display: none;
+    }
+
+    .mental-container #inside #img-middle {
+        margin-block: 3rem;
+    }
+
+    .recomendacoes ol li {
+        width: 100%;
+        background-color: #313238;
+        padding: 10px;
+        border-radius: 5px;
+        transition: 0.3s;
+        border: 2px solid white;
+    }
+
+    .recomendacoes .rec-img-txt {
+        height: 600px;
+    }
+
+    .recomendacoes .top-text {
+        width: 90%;
+    }
+
+    .recomendacoes .rec-img-txt .top-text p {
+        font-size: 0.85rem;
+    }
+
+    .recomendacoes .top-img {
+        height: 600px;
+    }
+
+    .recomendacoes ol li:hover {
+        transform: scale(1.2);
+        transition: 0.3s;
+    }
+
+    .background-ol #img-show {
+        position: relative;
+        max-width: 120%;
+        margin-bottom: 0;
+    }
+
+    .background-ol #img-show:hover {
+        transform: scale(1.0);
+    }
+
+    #li-space {
+        margin-top: 0rem;
+    }
+
+    .recomendacoes ol {
+        background-color: transparent;
+        padding: 0;
+        margin-inline: 1rem;
+    }
+
+    .recomendacoes .top-text p {
+        height: fit-content;
+        font-size: 0.9rem;
+    }
+
+    .rec-img-txt .background-ol {
+        position: relative;
+        width: fit-content;
+    }
+
+    .recomendacoes .background-ol .img-ol {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .recomendacoes .background-ol img {
+        position: absolute;
+        width: 150%;
+    }
+
+    .recomendacoes .background-ol .li-space {
+        margin-top: 30rem;
+        /* tudo isso? */
+    }
+
+    #dicas p {
+        padding: 20px;
+    }
+
+    #dicas img {
+        margin-block: 2rem;
+        max-width: 100%;
+    }
+
+    .dicas .alimentacao,
+    .exercicios,
+    .bem-estar,
+    #imc {
+        margin-inline: 0rem;
+    }
+
+    #imc #img-imc {
+        margin-block: 5rem;
+        padding: 0;
+        max-width: 120%;
+        margin-left: -25px;
+        transition: .3s;
+    }
+
+    #imc #img-imc:hover {
+        transform: scale(1.1);
+        transition: .3s;
+    }
+
+    #imc #main-section {
+        margin-top: 3rem;
+    }
+
+    #imc #main-section .historico h1 {
+        width: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+    .top-navbar {
+        gap: 2rem;
+    }
+
+    .header .headline {
+        font-size: 0.7rem;
+    }
+
+
+    .left-content {
+        position: relative;
+    }
+
+    .left-content p {
+        width: 100%;
+        font-size: 1rem;
+        margin-right: 2rem;
+        border-left: none;
+    }
+
+    .left-content:hover p {
+        border-left: none;
+    }
+
+    .left-content .the-gap {
+        background-color: black;
+        display: inline;
+        height: 2px;
+        top: 10.7rem;
+        /* provavelmente tem um jeito muito mais fácil de fazer isso, mas eu não sei qual. Haha */
+        width: 80%;
+        margin-top: 1rem;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .left-content:hover .the-gap {
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    .cuidados .cuidados-content .cuidados-inside,
+    .ar-livre-inside {
+        font-size: 1.12rem;
+        margin-inline: 0.25;
+        text-align: center;
+        width: fit-content;
+    }
+
+    .img-container,
+    .img-over {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    #img-pos {
+        position: absolute;
+        left: -26px;
+        /* FINALMENTE */
+    }
+
+
+    #inside #img-middle {
+        max-width: 125%;
+        margin-left: -24px;
+    }
+
+
+
+    #img-show,
+    #img-pos,
+    #img-middle {
+        max-width: 100%;
+    }
+
+    #img-imc {
+        max-width: 120%;
+        margin-left: -24px;
+        margin-bottom: 3rem;
+    }
+
+    .recomendacoes .rec-img-txt {
+        height: 600px;
+        margin-block: 10rem;
+    }
+
+    .recomendacoes .top-text {
+        max-height: 500px;
+    }
+
+    .recomendacoes .top-img {
+        height: 600px;
+    }
+
+    .recomendacoes .top-text h1 {
+        font-size: 1.75rem;
+    }
+
+
+    .recomendacoes .top-text #especial {
+        font-size: 0.99rem;
+    }
+
+    .recomendacoes {
+        margin: 1rem auto;
+    }
+
+    .recomendacoes ol {
+        margin-top: 0;
+        margin-inline: 0rem;
+        width: 100;
+    }
+
+    .recomendacoes .background-ol img {
+        position: absolute;
+        width: 100%;
+    }
+
+    .recomendacoes .background-ol .li-space {
+        margin-top: 20rem;
+    }
+
+    .rec-img-txt .top-text h4 {
+        font-size: 1.10rem;
+        width: 100%;
+    }
+
+    #dicas p {
+        padding: 30px;
+    }
+
+    .dicas .alimentacao,
+    .exercicios,
+    .bem-estar,
+    #imc {
+        margin-inline: 0rem;
+        width: fit-content;
+        border: 0px;
+        border-top: 4px solid white;
+        border-bottom: 4px solid white;
+        border-radius: 0px;
+    }
+
+    .dicas .alimentacao p,
+    .exercicios p,
+    .bem-estar p,
+    #imc .imc-text p {
+        margin-inline: 0.5rem;
+        text-align: left;
+    }
+
+
+}

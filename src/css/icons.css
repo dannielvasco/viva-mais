@@ -1,0 +1,77 @@
+.top-navbar .phone-navbar {
+    width: 20px;
+    position: relative;
+    margin-left: 260px;
+}
+
+.top-navbar .phone-navbar, .phone-txt {
+    display: none;
+}
+
+.over-phone {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.phone-navbar:hover .over-phone {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.top-navbar .ícones-navbar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.fruta-navbar {
+    position: relative;
+}
+
+.over-fruta {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.fruta-navbar:hover .over-fruta{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.body-building-navbar {
+    position: relative;
+}
+
+.over-body-building {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.body-building-navbar:hover .over-body-building{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.coração-navbar {
+    position: relative;
+}
+
+.over-coração {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.coração-navbar:hover .over-coração{
+    opacity: 1;
+    cursor: pointer;
+}

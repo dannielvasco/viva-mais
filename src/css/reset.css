@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+u {
+    border-bottom: 2px solid #98ff98;
+    text-decoration: none;
+}
+
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container, .top-navbar {
+    max-width: 100%;
+    overflow-x: hidden;
+}

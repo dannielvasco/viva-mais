@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Saúde e bem-estar">
+    <meta name="keywords" content="Saúde, bem-estar, IMC, alimentação, exercicios físicos, saúde mental">
+    <meta name="author" content="Danneil Vasconcellos Costa Lucas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/icons.css">
+    <link rel="stylesheet" href="./src/css/menu.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <link rel="stylesheet" href="./src/css/division.css">
+    <link rel="stylesheet" href="./src/css/outro-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>VIVA +</title>
+    <link rel="icon" type="image/x-icon" href="./src/img/favicon.png">
+
+    <style type="text/css">
+        #slider {
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500%;
+            animation: 20s slider infinite;
+        }
+
+        #slider figure img {
+            float: left;
+            width: 20%;
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+        }
+
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+
+            20% {
+                left: 0;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+        }
+    </style>
+</head>
+
+<body> <!--  onload="ditadosTransition()"> console salvou demais que isso -->
+    <div class="container">
+        <nav class="top-navbar">
+            <a href="index.html" target="_self">
+                <div class="top-logo-content">
+                    <div class="top-img-logo">
+                        <img src="./src/img/logo.png" alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                    </div>
+
+                    <div class="top-logo">
+                        <h1>
+                            VIVA +
+                        </h1>
+                    </div>
+                </div>
+            </a>
+
+            <div class="phone-navbar">
+                <a href="#" target="_blank">
+                    <img src="./src/img/telefone-colorido.png" alt="Desenho de um telefone.">
+                    <img class="over-phone" src="./src/img/telefone-colorido-branco.png">
+            </div>
+            <div class="phone-txt">
+                XX XX XXXXX-XXXX
+            </div>
+            </a>
+
+            <div class="asterisk-back-space" id="asterisk-back-space">
+                <span class="material-symbols-outlined asterisk">
+                    asterisk
+                </span>
+            </div>
+            <div onclick="ditadosChange()" class="ditados">
+                <u id="ditados"></u>
+                <button>
+                    <!-- <span onclick="ditadosChange()" class="material-symbols-outlined arrow">
+                    chevron_right
+                    </span>
+                </button> -->
+            </div>
+
+            <div class="ícones-navbar">
+                <div class="fruta-navbar">
+                    <img src="./src/img/fruta-colorido.png" alt="Desenho de um trio de frutas.">
+                    <!-- <img class="over-fruta" src="./src/img/fruta-colorido-branco.png"> -->
+                </div>
+
+                <div class="body-building-navbar">
+                    <img src="./src/img/body-building-colorido.png" alt="Desenho de um braço musculoso.">
+                    <!-- <img class="over-body-building" src="./src/img/body-building-colorido-branco.png"> -->
+                </div>
+
+                <div class="coração-navbar">
+                    <img src="./src/img/coração-colorido.png" alt="Desenho de um coração e cérebro unidos.">
+                    <!-- <img class="over-coração" src="./src/img/coração-colorido-branco.png"> -->
+                </div>
+            </div>
+
+            <label class="hamburger-menu">
+                <input id="input" type="checkbox">
+            </label>
+
+            <aside class="sidebar">
+                <div class="sidebar-logo">
+                    <img src="./src/img/logo-branco.png" alt="íUm desenho de uma cabeça com folhas saindo para fora.">
+                    <h3>VIVA +</h3>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <div class="sidebar-mental">
+                        <button class="sidebar-btn"> <span class="material-symbols-outlined btn-icon psychology">
+                                psychology
+                            </span>
+                            <div class="btn-title">Outro</div>
+                        </button>
+
+                        <ul id="saude-li" class="btn-li">
+                            <li><a href="./outro.html#mental">Saúde Mental</a></li>
+                            <li><a href="./outro.html#video">Video</a></li>
+                            <li><a href="./outro.html#imc">IMC</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="sidebar-home">
+                        <button class="sidebar-btn"> <span class="material-symbols-outlined btn-icon home">
+                                home
+                            </span>
+                            <a target="_self" href="./index.html" class="btn-title">Voltar</a>
+                        </button>
+
+                    </div>
+
+
+                </nav>
+            </aside>
+        </nav>
+        <nav class="navbar">
+            <a href="index.html" target="_self">
+                <div class="logo-content">
+                    <div class="img-logo">
+                        <img src="./src/img/logo.png" alt="íUm desenho de uma cabeça com folhas saindo para fora.">
+                    </div>
+
+                    <div class="logo">
+                        <h1>
+                            VIVA +
+                        </h1>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <div class="menu">
+                <div class="dropdown">
+                    <a target="_self" href="./index.html#cuide-se" class="dropbtn"> <img class="outside-page"
+                            src="./src/img/outside-page.svg"
+                            alt="Um desenho que indica que você irá sair do site ao clicar."> Saúde</a>
+                    <div class="dropdown-content">
+                        <a href="./index.html#cuide-se" target="_self">Introdução</a>
+                        <a href="./index.html#ar-livre" target="_self">Ar Livre</a>
+                        <a href="./index.html#recomendacoes" target="_self">Recomendações</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-dicas">
+                    <a target="_self" href="./index.html#dicas" class="dropbtn-dicas"> <img class="outside-page"
+                            src="./src/img/outside-page.svg"
+                            alt="Um desenho que indica que você irá sair do site ao clicar."> Dicas</a>
+                    <div class="dropdown-dicas-content">
+                        <a href="./index.html#alimentacao">Alimentação</a>
+                        <a href="./index.html#exercicios">Exercícios</a>
+                        <a href="./index.html#bem-estar">Bem Estar</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-saiba-mais">
+                    <a href="outro.html" target="_self" class="dropbtn-saiba-mais"> <img class="outside-page"
+                            src="./src/img/outside-page.svg"
+                            alt="Um desenho que indica que você irá sair do site ao clicar."> Saiba
+                        Mais</a>
+                    <div class="dropdown-saiba-mais-content">
+                        <a href="outro.html#mental">Saúde Mental</a>
+                        <a href="outro.html#video">Vídeos</a>
+                        <a href="outro.html#imc">IMC</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="headline">
+                <h2>
+                    Seja bem-vindo(a) ao meu site de saúde e bem-estar! Aqui, você encontrará dicas e recomendações para
+                    ter uma melhor qualidade de vida.
+                </h2>
+
+                <h4>
+                    Descubra o caminho para uma vida saudável e equilibrada. Bem-estar em primeiro lugar.
+                </h4>
+            </div>
+
+            <div id="slider">
+                <figure>
+                    <img class="img-h-0" src="./src/img/img-headline.jpg">
+                    <img class="img-h-1" src="./src/img/img-headline-1.jpg">
+                    <img class="img-h-2" src="./src/img/img-headline-2.jpg">
+                    <img class="img-h-3" src="./src/img/img-headline-3.jpg">
+                    <img class="img-h-4" src="./src/img/img-headline.jpg">
+                </figure>
+            </div>
+        </header>
+
+
+        <section class="column">
+
+            <div class="left-column">
+                <div class="left-content">
+                    <h2>
+                        BEM-VINDO(A) AO MEU SITE!
+                    </h2>
+                    <p> Explore nossos recursos, dicas e artigos cuidadosamente elaborados para ajudá-lo em sua jornada
+                        de autocuidado. </p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="right-content">
+                    <img class="corredor" src="./src/img/corrida.png" alt="Desenho de um homem correndo.">
+                    <img class="body-building-content" src="./src/img/body-building.png"
+                        alt="Desenho de um braço musculoso.">
+                    <img class="fruta-content" src="./src/img/coração.png"
+                        alt="Desenho de um coração e cérebro unidos.">
+                </div>
+            </div>
+        </section>
+
+        <section class="intro" id="saude-mental">
+
+
+
+            <div id="mental" class="mental">
+                <div class="mental-content">
+
+                    <h2>
+                        Sua saúde mental importa!
+                    </h2>
+
+                    <div id="mental-inside" class="mental-inside">
+                        <img class="img-top" src="./src/img/img-mental.jpg"
+                            alt="Fotografia de um homem deprimido com a cabeça encostada em uma árvore.">
+                        <p>
+                            A saúde mental é essencial para o nosso bem-estar geral, afetando como pensamos, sentimos e
+                            agimos
+                            no dia a dia. Priorizá-la é tão crucial quanto cuidar da saúde física.
+                            <span class="p-excess">
+                                Cultivar uma boa
+                                saúde mental
+                                envolve reconhecer e lidar com emoções de forma saudável, manter relacionamentos
+                                positivos,
+                                lidar
+                                com o estresse de maneira eficaz e nutrir a autoestima e a autoconfiança.
+                            </span>
+                            <br><br>
+                            Para cuidar da saúde mental, é importante reservar tempo para atividades que tragam prazer e
+                            relaxamento, como hobbies, exercícios físicos e práticas de <a
+                                style="color: #82f582; border-bottom: 2px solid #82f582;"
+                                href="#rodape"> mindfulness¹.</a>
+                            <span class="p-excess">
+                                Além disso, buscar
+                                apoio
+                                emocional, seja por meio de amigos, familiares ou profissionais de saúde mental, pode
+                                ser
+                                extremamente benéfico.
+                            </span>
+                            <br><br>
+                        </p>
+                        <div class="img-container">
+                            <img id="img-middle" class="img-middle" src="./src/img/img-mental.jpg"
+                                alt="Fotografia de um homem deprimido com a cabeça encostada em uma árvore.">
+                        </div>
+                            <span style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="p-extra-excess">
+                                Aprender a gerenciar o estresse de forma saudável é fundamental. Isso pode envolver
+                                técnicas
+                                de
+                                respiração, meditação e exercícios de relaxamento. Priorizar o sono adequado,
+                                alimentação
+                                balanceada
+                                e exercícios físicos também contribui para uma boa saúde mental.
+                                <br><br>
+                                É crucial estar atento aos sinais de que algo não está bem e buscar ajuda quando
+                                necessário.
+                                Nunca
+                                hesite em procurar a orientação de um profissional de saúde mental se estiver
+                                enfrentando
+                                dificuldades emocionais ou psicológicas. Cuidar da saúde mental é um investimento
+                                valioso em
+                                nossa
+                                qualidade de vida e felicidade.
+                            </span>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <section class="mental-container">
+        <div class="mental-pos" id="mental-pos">
+            <h2>
+                Pensar em si mesmo não é algo egoísta!
+            </h2>
+
+            <div id="inside" class="mental-pos-inside">
+                <p> <img class="img-top" src="./src/img/img-mental-1.jpg"
+                        alt="Uma fotografia de uma mulher sentada em uma rocha cinza perto de um corpo d'água.">
+                    <span class="p-excess">
+                        Promover uma saúde mental sólida é essencial para o nosso bem-estar geral. Incorporar
+                        hábitos
+                        saudáveis em nossa rotina diária pode fazer uma grande diferença em como nos sentimos e
+                        lidamos
+                        com os desafios da vida.
+
+                        <br><br>
+                    </span>
+                    Uma das chaves para uma saúde mental melhor é o autocuidado. Reserve um tempo para si mesmo
+                    todos os dias, seja para praticar um hobby, relaxar ou simplesmente descansar. Estabelecer
+                    uma
+                    rotina saudável também é importante. Manter horários regulares para dormir, comer e se
+                    exercitar
+                    pode ajudar a reduzir o estresse e melhorar o humor.
+
+                    <br><br>
+                    <span class="p-extra-excess">
+                        Falando em exercício, atividade física regular não é apenas importante para a saúde física,
+                        mas
+                        também para a mental. Encontre uma atividade que você goste e faça dela uma parte regular de
+                        sua
+                        vida. Uma alimentação saudável também desempenha um papel fundamental. Uma dieta
+                        equilibrada,
+                        rica em nutrientes, pode fornecer a energia e os nutrientes necessários para manter o
+                        cérebro e
+                        o corpo funcionando bem.
+                    </span>
+                    <br><br>
+                    </p>
+                    <img id="img-middle" class="img-middle" src="./src/img/img-mental-1.jpg"
+                    alt="Uma fotografia de uma mulher sentada em uma rocha cinza perto de um corpo d'água.">
+                    <p>
+                    Praticar o <a style="color: #82f582; border-bottom: 2px solid #82f582;"
+                        href="#rodape"> mindfulness¹.</a> também pode ser benéfico.
+                    <span id="p-ex" class="p-extra-excess">
+                        Aprender a estar
+                        presente no momento
+                        presente
+                        pode ajudar a reduzir o estresse e a ansiedade. Estabelecer limites saudáveis em nossos
+                        relacionamentos pessoais e profissionais também é importante. Aprenda a dizer não quando
+                        necessário e defina limites claros.
+                        <br><br>
+
+                        Além disso, cultivar relacionamentos positivos com amigos, familiares e entes queridos pode
+                        ser
+                        uma fonte importante de apoio emocional. E, finalmente, não hesite em buscar ajuda quando
+                        necessário. Um profissional de saúde mental pode oferecer orientação e suporte valiosos
+                        durante
+                        momentos difíceis.
+                        <br><br>
+                        Cada pessoa é única, então experimente diferentes estratégias e descubra o que funciona
+                        melhor
+                        para você.
+                    </span>
+                    Lembre-se, cuidar da saúde mental é uma jornada contínua e importante para o
+                    bem-estar geral.
+                </p>
+
+
+            </div>
+            <div id="rodape" class="rodape">
+                <h2 class="rodape-h2">Notas de Rodapé:</h2>
+                <ul class="ul-rodape">
+                    <li id="mindfulness" class="li-rodape"><b>Mindfulness¹</b>:
+                        Mindfulness é a prática de estar totalmente presente no momento, observando pensamentos,
+                        sentimentos e sensações sem julgá-los. Essa técnica é usada para reduzir o estresse e
+                        melhorar o bem-estar.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="video" id="video">
+        <div class="rec-img-txt">
+            <div class="top-img" style="filter: blur(2px);"></div>
+            <div class="top-text">
+                <h2>
+                    Assista alguns vídeos!
+                </h2>
+                <h4 style="color: white;">
+                    Assista alguns vídeos recomendados para se manter ainda mais informado!
+                    <br><br>
+                    (Exibição apenas, sem links de fato)
+                </h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header card-img"> <img src="./src/img/video-placeholder.png"
+                    alt="Imagem de um botão de play"></div>
+            <div class="card-body">
+                Cuidados à saúde!
+            </div>
+            <div class="card-footer">
+                <button class="btn">
+                    <!-- <a href="#"> -->
+
+                    Ver vídeo
+                    <!-- </a> -->
+                </button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header card-img"> <img src="./src/img/video-placeholder.png"
+                    alt="Imagem de um botão de play"></div>
+            <div class="card-body">
+                Ao ar livre!
+            </div>
+            <div class="card-footer">
+                <button class="btn">
+                    <!-- <a href="#"> -->
+                    Ver vídeo
+                    <!-- </a> -->
+                </button>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header card-img"> <img src="./src/img/video-placeholder.png"
+                    alt="Imagem de um botão de play"></div>
+            <div class="card-body">
+                Recomendações à saúde!
+            </div>
+            <div class="card-footer">
+                <button class="btn">
+                    <!-- <a
+                                href="#"> -->
+                    Ver vídeo
+                    <!-- </a> -->
+                </button>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header card-img"> <img src="./src/img/video-placeholder.png"
+                    alt="Imagem de um botão de play"></div>
+            <div class="card-body">
+                Uma alimentação saudável!
+            </div>
+            <div class="card-footer">
+
+                <button class="btn">
+                    <!-- <a href="#"> -->
+                    Ver vídeo
+                    <!-- </a> -->
+                </button>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header card-img"> <img src="./src/img/video-placeholder.png"
+                    alt="Imagem de um botão de play"></div>
+            <div class="card-body">
+                Exercícios fundamentais!
+            </div>
+            <div class="card-footer">
+
+                <button class="btn">
+                    <!-- <a
+                                href="#"> -->
+                    Ver vídeo
+                    <!-- </a> -->
+                </button>
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header card-img"> <img src="./src/img/video-placeholder.png"
+                    alt="Imagem de um botão de play"></div>
+            <div class="card-body">
+                Bem-estar sempre!
+            </div>
+            <div class="card-footer">
+
+                <button class="btn">
+                    <!-- <a href="#" target="_blank"> -->
+                    Ver vídeo
+                    <!-- </a> -->
+                </button>
+
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="finale" id="finale">
+        <section class="imc" id="imc">
+            <div class="rec-img-txt">
+                <div class="top-img"></div>
+                <div class="top-text">
+                    <h1>IMC</h1>
+                    <h4>Saiba o que é e descubra se está no seu peso ideal!</h4>
+                </div>
+            </div>
+            <div class="imc-text">
+
+                <p><strong>O</strong> Índice de Massa Corporal (IMC) é uma medida amplamente utilizada para avaliar se
+                    uma pessoa está com um peso saudável em relação à sua altura. <u>Ele é calculado dividindo-se o peso
+                        da
+                        pessoa pela altura ao quadrado.</u>
+                    <br><br>
+                    O IMC fornece uma estimativa da quantidade de gordura corporal de uma pessoa e é útil para
+                    determinar se alguém está em risco de certas condições de saúde relacionadas ao peso, como diabetes
+                    tipo 2, doenças cardíacas e pressão alta.
+                    <br><br>
+                    No entanto, é importante notar que o IMC tem suas limitações. Por exemplo, ele não leva em
+                    consideração a distribuição de gordura corporal, que pode variar entre indivíduos e afetar o risco
+                    de certas condições de saúde. Além disso, o IMC pode não ser tão preciso em pessoas muito
+                    musculosas, já que o músculo pesa mais do que a gordura.
+                    <br><br>
+                    As faixas de classificação do IMC geralmente são as seguintes:
+                    <br><br>
+                    <span class="classificacoes">
+                        <span class="ol-classificacoes"> <u> <span class="abaixo"> Abaixo do peso: </span> IMC abaixo de
+                                18,5</u></span>
+                        <span class="ol-classificacoes"> <u> <span class="normal">Peso normal: </span> IMC entre 18,5 e
+                                24,9</u></span>
+                        <span class="ol-classificacoes"> <u> <span class="sobre">Sobrepeso: </span> IMC entre 25 e 29,9
+                                ou superior</u></span>
+                        <span class="ol-classificacoes"> <u> <span class="obeso">Obeso: </span> IMC 30 ou
+                                superior</u></span>
+                        <span class="ol-classificacoes"> <u> <span class="grave">Obesidade Grave: </span> IMC 40 ou
+                                superior</u></span>
+                    </span>
+                    <br><br>
+                    <img id="img-imc" class="bottom" src="./src/img/img-imc.png"
+                        alt="Imagem com desenhos indicando as faixas de classificação do IMC.">
+                    <br><br>
+                    No entanto, é importante interpretar o IMC com cautela e considerar outros fatores, como a
+                    composição corporal e a distribuição de gordura, ao avaliar a saúde de alguém. Sempre é aconselhável
+                    consultar um profissional de saúde para uma avaliação mais completa e personalizada.
+                </p>
+                <div class="division-full">
+                    <div class="span-line">
+                        <span></span>
+                    </div>
+                    <div class="span-sec">
+                        <div id="span-sec">
+                            <span></span> <span></span>
+                        </div>
+
+                    </div>
+                    <div class="span-line">
+                        <span></span>
+                    </div>
+
+                    <div class="span-sec">
+                        <div id="span-sec">
+                            <span></span> <span></span>
+                        </div>
+                    </div>
+                    <br><br><br>
+                    <div class="span-line">
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <section id="main-section" class="main-section">
+                    <h2><u>Calcule seu IMC!</u></h2>
+                    <section id="forms" class="forms">
+                        <form action="" id="calcular-imc" onsubmit="return salvarInfo(event);">
+                            <label for="nomesobrenome"><u>Nome e Sobrenome</u></label>
+                            <input name="nome" type="text" id="nome" class="input-padrao"
+                                placeholder="Digite seu nome (Não obrigatorio)">
+
+                            <label for="idade"><u>Idade</u></label>
+                            <input maxlength="3" name="idade" type="text" id="idade" class="input-padrao"
+                                placeholder="Digite sua idade (Não obrigatorio)">
+
+                            <label for="peso"><u>Peso</u></label>
+                            <input name="peso" type="text" id="peso" class="input-padrao" required
+                                placeholder="Digite seu peso em kg ex: 65,5">
+
+                            <label for="altura"><u>Altura</u></label>
+                            <input maxlength="3" name="altura" type="text" id="altura" required class="input-padrao"
+                                placeholder="Digite sua altura em cm ex: 173">
+
+                            <input type="submit" value="Enviar" class="enviar">
+                        </form>
+
+                        <div class="resultado">
+                            <h2 class="resultado-do-imc"> Resultado aqui!
+                            </h2>
+                            <h3 class="resultado-denovo">...</h4>
+                                <h3 class="classificacao-do-imc"></h3>
+                                <h2 class="mensagemErro"></h2>
+
+                        </div>
+
+
+                    </section>
+                    <div class="historico">
+                        <h2>Histórico <a target="_self" href="#toggleButton"
+                                class="material-symbols-outlined history title">
+                                history</a>
+                        </h2>
+                        <h4>Veja suas últimas alterações!</h4>
+                        <h1 class="historico-novo"> Informações Atuais</h1>
+                        <div class="historico-content-novo">
+                            <h3 id="imc-data-novo">Data:</h3>
+                            <h3 id="imc-calc-novo">Cálculo de IMC: </h3>
+                            <h3 id="imc-nome-novo">Nome:</h3>
+                            <h3 id="imc-idade-novo">Idade:</h3>
+                            <h3 id="imc-peso-novo">Peso:</h3>
+                            <h3 id="imc-altura-novo">Altura:</h3>
+                        </div>
+                        <div class="division-full">
+                            <div class="span-line">
+                                <span></span>
+                            </div>
+                            <div class="span-sec">
+                                <div id="span-sec">
+                                    <span></span> <span></span>
+                                </div>
+
+                            </div>
+                            <div class="span-line">
+                                <span></span>
+                            </div>
+
+                            <div class="span-sec">
+                                <div id="span-sec">
+                                    <span></span> <span></span>
+                                </div>
+                            </div>
+                            <br><br><br>
+
+
+                        </div>
+                        <div class="historico-ultimo-title">
+                            <!-- <span class="material-symbols-outlined asterisk">
+                                asterisk
+                            </span> -->
+                            <h1 class="historico-ultimo"> Modificações Recentes</h1>
+                        </div>
+                        <div class="historico-content">
+                            <h3 id="imc-data">Última Data:</h3>
+                            <h3 id="imc-calc">Último Cálculo de IMC: </h3>
+                            <h3 id="imc-nome">Nome:</h3>
+                            <h3 id="imc-idade">Idade:</h3>
+                            <h3 id="imc-peso">Peso Anterior:</h3>
+                            <h3 id="imc-altura">Altura Anterior:</h3>
+                        </div>
+                        <div class="division-full">
+                            <div class="span-line">
+                                <span></span>
+                            </div>
+                            <div class="span-sec">
+                                <div id="span-sec">
+                                    <span></span> <span></span>
+                                </div>
+
+                            </div>
+                            <div class="span-line">
+                                <span></span>
+                            </div>
+
+                            <div class="span-sec">
+                                <div id="span-sec">
+                                    <span></span> <span></span>
+                                </div>
+                            </div>
+                            <br><br><br>
+
+
+                        </div>
+                        <div class="historico-all-title">
+
+                            <h1 class="historico-ultimo denovo" id="historico-ultimo">Histórico de Modificações</h1>
+
+                            <button id="toggleButton" onclick="exibirInfo()"
+                                class="material-symbols-outlined history button">
+                                history
+                            </button>
+
+                            <div id="historico-todo"></div>
+                            <div class="modificacoes-container">
+                                <div class="modificacoes">
+                                </div>
+                                <!-- <div class="sem-dados">Nenhum dado disponível no momento <br> Preencha os campos do <a
+                                        href="#calcular-imc">formulário acima</a> primeiro <br><br> ༼ つ ◕_◕ ༽つ💚.</div> -->
+                            </div>
+                        </div>
+                        <div id="historico-all" class="historico-content">
+                            <h3 id="imc-data-all">Data:</h3>
+                            <h3 id="imc-calc-all">Cálculo de IMC: </h3>
+                            <h3 id="imc-nome-all">Nome:</h3>
+                            <h3 id="imc-idade-all">Idade:</h3>
+                            <h3 id="imc-peso-all">Peso:</h3>
+                            <h3 id="imc-altura-all">Altura:</h3>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </section>
+
+    <footer class="footer">
+        <div class="logo-rodape">
+            <div class="logo-rodape-img">
+                <img src="./src/img/logo-noline-branco.png" alt="Um desenho de uma cabeça com folhas saindo para fora.">
+            </div>
+            <div class="viva-content">
+                <h1 class="viva">
+                    <a href="index.html" target="_self">VIVA +</a>
+                </h1>
+            </div>
+        </div>
+        <h2 class="footer-h2">
+            Um site feito com HTML, CSS e JavaScript!
+        </h2>
+        <h4>
+            Criado por Danniel Vasconcellos Costa Lucas
+        </h4>
+
+        <div class="credits">
+            <h2><u>Créditos</u></h2>
+            <h3>Sites onde Imagens e Referências foram usadas durante o desenvolvimento do projeto.</h3>
+            <div id="credits-links" class="credits-links">
+                <div class="img-credits">
+                    <h2 class="img-credits-h2">Imagens:</h2>
+                    <ul class="ul-credits">
+                        <li class="li-credits">Pexels: <a target="_blank"
+                                href="https://www.pexels.com/pt-br/">https://www.pexels.com/pt-br/</a> </li>
+                        <li class="li-credits">Pixabay: <a target="_blank"
+                                href="https://pixabay.com/pt/">https://pixabay.com/pt/</a> </li>
+                        <li class="li-credits">Flaticon: <a target="_blank"
+                                href="https://www.flaticon.com/br/">https://www.flaticon.com/br/</a> </li>
+                    </ul>
+                </div>
+                <div class="ref-credits">
+                    <h2 class="ref-credits-h2">Referências:</h2>
+                    <ul class="ul-credits">
+                        <li class="li-credits">Alura: <a target="_blank"
+                                href="https://cursos.alura.com.br/forum/topico-criei-um-calculadora-de-imc-para-meu-site-com-essa-aula-de-js-236049">https://cursos.alura.com.br/forum/topico-criei-um-calculadora-de-imc-para-meu-site-com-essa-aula-de-js-236049</a>
+                        </li>
+                        <li class="li-credits">Autor do código original (IMC): <a target="_blank"
+                                href="https://cursos.alura.com.br/user/jc-px-alura">https://cursos.alura.com.br/user/jc-px-alura</a>
+                        </li>
+                        <li class="li-credits">W3Schools: <a target="_blank"
+                                href="https://www.w3schools.com">https://www.w3schools.com</a> </li>
+                        <li class="li-credits">w3newbie (Image Slider): <a target="_blank"
+                                href="https://www.youtube.com/watch?v=qDww4CbxtD4">https://www.youtube.com/watch?v=qDww4CbxtD4</a>
+                        </li>
+
+                        <li class="li-credits">Web Dev Simplified (Menu de Hamburger): <a target="_blank"
+                                href="https://www.youtube.com/watch?v=dAIVbLrAb_U&t=404s">https://www.youtube.com/watch?v=dAIVbLrAb_U&t=404s</a>
+                        </li>
+
+                        <li class="li-credits">Google Fonts: <a target="_blank"
+                                href="https://fonts.google.com">https://fonts.google.com</a> </li>
+
+
+                        <li class="li-credits">Kevin Powell (Scrollbar): <a target="_blank"
+                                href="https://www.youtube.com/watch?v=lvKK2fs6h4I&t=607s">https://www.youtube.com/watch?v=lvKK2fs6h4I&t=607s</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="nao-me-processa-por-favor">
+            <p> Este projeto foi criado exclusivamente para fins educacionais e de autoaprendizagem. Não tenho a
+                intenção de obter lucro, enganar ou difamar qualquer pessoa ou entidade. Todo o conteúdo, incluindo
+                imagens e referências, foi utilizado com respeito aos direitos dos autores originais.</p>
+            <p>Obrigado pela sua atenção. Eu te desejo um ótimo dia 💚</p>
+            <b style="color: white;">© Todos os direitos reservados</b>
+        </div>
+    </footer>
+    <a href="#" class="logo-scroll" target="_self">
+        <img style="width: 75px" src="./src/img/logo.png" alt="Um desenho de uma cabeça com folhas saindo para fora.">
+    </a>
+
+    <script src="./src/js/script.js">
+
+    </script>
+</body>
+
+</html>

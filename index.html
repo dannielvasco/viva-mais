@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Saúde e bem-estar">
+    <meta name="keywords" content="Saúde, bem-estar, IMC, alimentação, exercicios físicos, saúde mental">
+    <meta name="author" content="Danneil Vasconcellos Costa Lucas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/icons.css">
+    <link rel="stylesheet" href="./src/css/menu.css">
+    <link rel="stylesheet" href="./src/css/division.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>VIVA +</title>
+    <link rel="icon" type="image/x-icon" href="./src/img/favicon.png">
+
+    <style type="text/css">
+        #slider {
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500%;
+            animation: 20s slider infinite;
+        }
+
+        #slider figure img {
+            float: left;
+            width: 20%;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+
+            20% {
+                left: 0;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+        }
+    </style>
+</head>
+
+<body onload="ditadosTransition()">
+    <div class="container">
+        <nav class="top-navbar">
+            <a href="index.html" target="_self">
+                <div class="top-logo-content">
+                    <div class="top-img-logo">
+                        <img src="./src/img/logo.png" alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                    </div>
+
+                    <div class="top-logo">
+                        <h1>
+                            VIVA +
+                        </h1>
+                    </div>
+                </div>
+            </a>
+
+            <div class="phone-navbar">
+                <a href="#" target="_blank">
+                    <img src="./src/img/telefone-colorido.png" alt="Um desenho de um telefone.">
+                    <img class="over-phone" src="./src/img/telefone-colorido-branco.png">
+            </div>
+            <div class="phone-txt">
+                XX XX XXXXX-XXXX
+            </div>
+            </a>
+
+            <div class="asterisk-back-space">
+                <span class="material-symbols-outlined asterisk">
+                    asterisk
+                </span>
+            </div>
+            <div onclick="ditadosChange()" class="ditados">
+                <u id="ditados"></u>
+                <button>
+                    <!-- <span onclick="ditadosChange()" class="material-symbols-outlined arrow">
+                    chevron_right
+                    </span>
+                </button> -->
+            </div>
+
+            <div class="ícones-navbar">
+                <div class="fruta-navbar">
+                    <img src="./src/img/fruta-colorido.png" alt="Desenho de um trio de frutas.">
+                    <!-- <img class="over-fruta" src="./src/img/fruta-colorido-branco.png"> -->
+                </div>
+
+                <div class="body-building-navbar">
+                    <img src="./src/img/body-building-colorido.png" alt="Desenho de um braço musculoso.">
+                    <!-- <img class="over-body-building" src="./src/img/body-building-colorido-branco.png"> -->
+                </div>
+
+                <div class="coração-navbar">
+                    <img src="./src/img/coração-colorido.png" alt="Desenho de um coração e cérebro unidos.">
+                    <!-- <img class="over-coração" src="./src/img/coração-colorido-branco.png"> -->
+                </div>
+            </div>
+
+            <label class="hamburger-menu">
+                <input type="checkbox">
+            </label>
+
+            <aside class="sidebar">
+                <div class="sidebar-logo">
+                    <img src="./src/img/logo-branco.png" alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                    <h3>VIVA +</h3>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <div class="sidebar-saude">
+                        <button class="sidebar-btn"> <span class="material-symbols-outlined btn-icon heart-plus">
+                                heart_plus
+                            </span>
+                            <div class="btn-title"> Sáude</div>
+                        </button>
+
+                        <ul id="saude-li" class="btn-li">
+                            <li><a href="#cuide-se">Introdução</a></li>
+                            <li><a href="#ar-livre">Ar Livre</a></li>
+                            <li><a href="#recomendacoes">Sugestões</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="sidebar-dicas">
+                        <button class="sidebar-btn"> <span class="material-symbols-outlined btn-icon exerice">
+                                exercise
+                            </span>
+                            <div class="btn-title">Dicas</div>
+                        </button>
+
+                        <ul id="dicas-li" class="btn-li">
+                            <li><a href="#alimentacao">Alimentação</a></li>
+                            <li><a href="#exercicios">Exercícios</a></li>
+                            <li><a href="#bem-estar">Bem Estar</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="sidebar-outro">
+                        <button class="sidebar-btn"> <span class="material-symbols-outlined btn-icon new-page">
+                                open_in_new
+                            </span>
+                            <a target="_self" href="./outro.html" class="btn-title">Outro</a>
+                        </button>
+
+                        <!-- <ul id="outro-li" class="btn-li">
+                            <li><a href="./outro.html#mental">Saúde Mental</a></li>
+                            <li><a href="./outro.html#video">Vídeos</a></li>
+                            <li><a href="./outro.html#imc">IMC</a></li>
+                        </ul> -->
+                    </div>
+
+
+                </nav>
+            </aside>
+        </nav>
+        <nav class="navbar">
+
+            <a class="logo-link" target="_self" href="index.html">
+                <div class="logo-content">
+
+                    <div class="img-logo">
+                        <img class="img-logo-content" src="./src/img/logo.png"
+                            alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                    </div>
+
+                    <div class="logo">
+
+                        <h1>
+                            VIVA +
+                        </h1>
+                    </div>
+                </div>
+            </a>
+
+
+            <div class="menu">
+                <div class="dropdown">
+                    <a target="_self" href="#cuide-se" class="dropbtn">Saúde</a>
+                    <div class="dropdown-content" id="drop-cont">
+                        <a href="#cuide-se" target="_self">Introdução</a>
+                        <a href="#ar-livre" target="_self">Ar Livre</a>
+                        <a href="#recomendacoes" target="_self">Recomendações</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-dicas">
+                    <a target="_self" href="#dicas" class="dropbtn-dicas">Dicas</a>
+                    <div class="dropdown-dicas-content" id="drop-cont">
+                        <a href="#alimentacao">Alimentação</a>
+                        <a href="#exercicios">Exercícios</a>
+                        <a href="#bem-estar">Bem Estar</a>
+                    </div>
+                </div>
+
+                <div class="dropdown-saiba-mais">
+                    <a href="./outro.html" target="_self" class="dropbtn-saiba-mais"> <img class="outside-page"
+                            src="./src/img/outside-page.svg"
+                            alt="Um desenho que indica que você irá sair do site ao clicar."> Saiba
+                        Mais</a>
+                    <div class="dropdown-saiba-mais-content" id="drop-cont">
+                        <a href="./outro.html#saude-mental">Saúde Mental</a>
+                        <a href="./outro.html#video">Vídeos</a>
+                        <a href="./outro.html#imc">IMC</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="headline">
+                <h2>
+                    Seja bem-vindo(a) ao meu site de saúde e bem-estar! Aqui, você encontrará dicas e recomendações para
+                    ter uma melhor qualidade de vida.
+                </h2>
+
+                <h4>
+                    Descubra o caminho para uma vida saudável e equilibrada. Bem-estar em primeiro lugar.
+                </h4>
+            </div>
+
+            <div id="slider">
+                <figure>
+                    <img class="img-h-0" src="./src/img/img-headline.jpg">
+                    <img class="img-h-1" src="./src/img/img-headline-1.jpg">
+                    <img class="img-h-2" src="./src/img/img-headline-2.jpg">
+                    <img class="img-h-3" src="./src/img/img-headline-3.jpg">
+                    <img class="img-h-4" src="./src/img/img-headline.jpg">
+                </figure>
+            </div>
+        </header>
+
+
+        <section class="column">
+
+            <div class="left-column">
+                <div class="left-content">
+                    <h2>
+                        BEM-VINDO(A) AO MEU SITE!
+                    </h2>
+                    <div class="the-gap">
+                        <hr>
+                    </div>
+                    <p> Explore nossos recursos, dicas e artigos cuidadosamente elaborados para ajudá-lo em sua jornada
+                        de autocuidado. </p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="right-content">
+                    <img class="corredor" src="./src/img/corrida.png" alt="Desenho de um homem correndo.">
+                    <img class="body-building-content" src="./src/img/body-building.png"
+                        alt="Desenho de um braço musculoso.">
+                    <img class="fruta-content" src="./src/img/coração.png"
+                        alt="Desenho de um coração e cérebro unidos.">
+                </div>
+            </div>
+        </section>
+
+        <section class="intro" id="cuide-se">
+
+            <div class="cuidados">
+                <div class="cuidados-content">
+
+                    <h2>
+                        Qual a importância dos cuidados à saúde?
+                    </h2>
+
+                    <div id="inside" class="cuidados-inside">
+
+                        <div class="img-over">
+                            <img id="img-show" class="img-top img-original" src="./src/img/img-cuidados.jpg"
+                                alt="Fotografia de uma mulher cortando uma fruta.">
+
+                            <img id="img-show" class="img-top img-pos" src="./src/img/img-cuidados-pos.jpg"
+                                alt="Fotografia de uma mulher prestes a comer uma colher de frutas enquanto esbanja um sorriso para a câmera">
+                        </div>
+                        <p class="p-cuidados p-excess" id="p-cuidados">
+                            Os cuidados com a saúde
+                            são
+                            fundamentais para uma vida
+                            plena e satisfatória. Eles incluem hábitos como alimentação saudável, exercícios físicos,
+                            sono
+                            adequado,
+                            gerenciamento do estresse e visitas regulares ao médico.
+                        </p>
+                        <br><br>
+                        <div class="img-over">
+                            <img class="img-middle img-original" id="img-show" src="./src/img/img-cuidados.jpg"
+                                alt="Fotografia de uma mulher cortando uma fruta.">
+
+                            <img id="img-pos" class="img-middle img-pos" src="./src/img/img-cuidados-pos.jpg"
+                                alt="Fotografia de uma mulher prestes a comer uma colher de frutas enquanto esbanja um sorriso para a câmera">
+
+                        </div>
+                        <p>
+                            Cuidar da saúde
+                            previne
+                            doenças, reduz
+                            custos médicos, melhora o bem-estar emocional, aumenta a produtividade, fortalece os
+                            relacionamentos e
+                            contribui para uma vida longa e autônoma. Em resumo, investir na saúde é essencial para uma
+                            vida
+                            feliz e
+                            produtiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="ar-livre" id="ar-livre">
+                <div class="ar-livre-content">
+                    <h2>
+                        E que tal ao ar livre?
+                    </h2>
+
+                    <div id="inside" class="ar-livre-inside">
+                        <div class="img-container">
+                            <img id="img-show" class="img-top" src="./src/img/img-ar-livre.jpg"
+                                alt="Uma fotografia de dois idosos sentados ao ar livre.">
+                        </div>
+                        <p>
+                            Estar ao ar livre
+                            oferece
+                            uma série de
+                            qualidades únicas que contribuem para o bem-estar geral. Respirar ar fresco pode revigorar e
+                            refrescar,
+                            enquanto a exposição à luz solar promove a produção de vitamina D e melhora o humor. Além
+                            disso,
+                            estar
+                            cercado pela natureza ajuda a reduzir o estresse, aumenta a sensação de calma e promove a
+                            saúde
+                            mental.
+                        </p>
+                        <br><br>
+                        <div class="img-container">
+                            <img id="img-show" class="img-middle" src="./src/img/img-ar-livre.jpg"
+                                alt="Uma fotografia de dois idosos sentados ao ar livre.">
+                        </div>
+                        <p class="p-excess">
+
+                            A natureza oferece uma variedade de cenários para explorar, estimulando a curiosidade e
+                            fornecendo
+                            experiências únicas de aprendizado e descoberta. Em resumo, estar ao ar livre não apenas
+                            nutre o
+                            corpo,
+                            mas também a mente e o espírito, proporcionando uma sensação de bem-estar holístico.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recomendacoes" id="recomendacoes">
+
+                <div class="rec-img-txt">
+                    <div class="top-img" style="filter: blur(2px);"></div>
+                    <div class="top-text">
+                        <h1>
+                            O que fazer para cuidar da saúde?
+                        </h1>
+                        <p id="especial" >Cuidar da sua saúde é uma jornada que envolve cuidados físicos, mentais e emocionais. É um
+                            compromisso
+                            consigo mesmo para garantir que você possa desfrutar de uma vida plena e satisfatória. Aqui
+                            estão
+                            algumas maneiras de cuidar da sua saúde em todos os aspectos:
+                        </p>
+                    </div>
+                </div>
+                <ol>
+                    <div class="background-ol">
+                        <div id="img-ol" class="img-ol">
+                            <img id="img-show" src="./src/img/img-recomendacoes-1.jpg"
+                                alt="Uma médica de braços cruzados.">
+                        </div>
+                        <div id="li-space" class="li-space">
+                            <li><strong>Alimentação balanceada:</strong> Priorize alimentos naturais e evite alimentos
+                                processados.
+                            </li>
+                            <li><strong>Atividade física regular:</strong> Mantenha-se ativo com exercícios que você
+                                goste.
+                            </li>
+                            <li><strong>Descanso adequado:</strong> Estabeleça uma rotina de sono regular para uma boa
+                                saúde
+                                mental e
+                                física.
+                            </li>
+                            <li><strong>Gerenciamento do estresse:</strong> Encontre formas saudáveis de lidar com o
+                                estresse,
+                                como
+                                meditação ou
+                                hobbies relaxantes.</li>
+                            <li><strong>Cuidado com a saúde mental:</strong> Priorize sua saúde emocional e busque apoio
+                                quando
+                                necessário.</li>
+                            <li><strong>Check-ups médicos regulares:</strong> Faça exames médicos de rotina para
+                                monitorar
+                                sua
+                                saúde.</li>
+                            <li><strong>Evite hábitos prejudiciais:</strong> Reduza o consumo de álcool, não fume e
+                                evite
+                                drogas
+                                ilegais.</li>
+                            <li><strong>Pratique boa higiene pessoal:</strong> Lave as mãos regularmente e mantenha uma
+                                boa
+                                higiene
+                                bucal.</li>
+                            <li><strong>Busque equilíbrio:</strong> Reserve tempo para relaxar e se divertir.</li>
+                            <li><strong>Seja proativo:</strong> Comece a cuidar da sua saúde agora mesmo, fazendo
+                                pequenas
+                                mudanças
+                                positivas em sua
+                                rotina diária.</li>
+                        </div>
+                    </div>
+                </ol>
+
+            </div>
+
+        </section>
+        <section class="dicas" id="dicas">
+            <section class="alimentacao" id="alimentacao">
+                <div class="rec-img-txt">
+                    <div class="top-img"></div>
+                    <div class="top-text">
+                        <h1>Como ter uma alimentação saudável?</h1>
+                    </div>
+                </div>
+
+                <div class="alimentacao-text">
+
+                    <p> <strong>U</strong>ma
+                        alimentação saudável é fundamental para promover o bem-estar e a vitalidade do corpo. É uma
+                        questão
+                        não apenas de escolha dos alimentos certos, mas também de <u>cultivar hábitos</u> e
+                        <u>mentalidades
+                            que apoiam uma relação positiva com a comida.</u>
+                        <br><br>
+
+
+                        <img id="img-dicas" class="img-top" src="./src/img/img-alimentacao-1.jpg"
+                            alt="Uma imagem preenchida com um monte de maçãs.">
+ 
+                    Em primeiro lugar, é importante <u>priorizar uma variedade de alimentos em cada refeição.</u>
+                    Isso
+                    significa incluir uma ampla gama de frutas, legumes, cereais integrais, proteínas magras e
+                    laticínios com baixo teor de gordura. Cada grupo alimentar oferece nutrientes essenciais que o
+                    corpo
+                    precisa para funcionar de forma otimizada.
+                    <br><br>
+                    Além disso, é fundamental <u>o tamanho das porções.</u> A prática de comer com moderação ajuda a
+                    evitar excessos e a manter um equilíbrio saudável. <u>Aprender a reconhecer os sinais de fome e
+                        saciedade</u> é crucial para garantir que estamos dando ao nosso corpo a quantidade certa de
+                    comida de que ele precisa.
+                    <br><br>
+                    <img id="img-dicas" class="img-middle" src="./src/img/img-alimentacao-2.jpg"
+                        alt="Uma fotografia de um pão de forma com cinco ovos cozidos e um alface.">
+
+                    Outro aspecto importante é dar <u>preferência aos alimentos integrais em vez dos
+                        processados.</u> Os
+                    alimentos integrais são ricos em fibras, vitaminas e minerais, proporcionando benefícios
+                    duradouros
+                    para a saúde. Evitar alimentos processados, que muitas vezes são carregados com açúcares
+                    adicionados, gorduras saturadas e aditivos, é uma escolha inteligente para manter-se saudável.
+                    <br><br>
+                    A <u>hidratação adequada</u> também desempenha um papel crucial em uma alimentação saudável.
+                    Beber
+                    bastante água ao longo do dia ajuda a manter o corpo hidratado e a apoiar todas as funções
+                    vitais.
+                    Optar por água, chá ou sucos naturais em vez de bebidas açucaradas ou refrigerantes é uma
+                    maneira
+                    fácil de melhorar a qualidade da sua dieta.
+                    <br><br>
+                    <img id="img-dicas" class="bottom-img" src="./src/img/img-alimentacao-3.jpg"
+                        alt="Uma fotografia de um prato com alimentos saudáveis.">
+
+                    Além disso, <u>reduzir o consumo de açúcares e gorduras saturadas</u> é essencial para uma
+                    alimentação saudável. Escolher fontes de carboidratos complexos, como frutas, legumes e grãos
+                    integrais, em vez de alimentos com alto teor de açúcar, ajuda a manter os níveis de energia
+                    estáveis
+                    e promove uma sensação de saciedade duradoura. Da mesma forma, <u>optar por fontes de gorduras
+                        saudáveis, como abacates, nozes e peixes ricos em ômega-3</u>, em vez de gorduras saturadas,
+                    pode beneficiar a saúde do coração e reduzir o risco de doenças crônicas.
+                    <br><br>
+                    Por fim, o <u>planejamento das refeições</u> desempenha um papel importante na manutenção de uma
+                    alimentação saudável. Fazer um plano semanal de refeições e preparar alimentos saudáveis com
+                    antecedência pode ajudar a evitar escolhas impulsivas e garantir que você tenha opções saudáveis
+                    ​​disponíveis quando estiver com fome.
+                    <br><br>
+                    Em resumo, uma alimentação saudável é uma questão de <u>equilíbrio, moderação e escolhas
+                        conscientes.</u> Ao priorizar alimentos integrais, controlar o tamanho das porções,
+                    manter-se
+                    hidratado e fazer escolhas alimentares informadas, você pode apoiar a saúde do seu corpo e
+                    desfrutar
+                    de uma vida mais vibrante e energética.
+                    </p>
+                </div>
+            </section>
+            <section class="exercicios" id="exercicios">
+                <div class="rec-img-txt">
+                    <div class="top-img"></div>
+                    <div class="top-text">
+                        <h1>Bora se exercitar? 💪</h1>
+                    </div>
+                </div>
+                <div class="exercicios-text">
+                    <p> <img id="img-dicas" class="img-top" src="./src/img/img-exercicios-1.jpg"
+                            alt="Uma fotografia com três homens andando de bicicleta ao ar livre.">
+
+                        <strong>A</strong> prática regular de exercícios físicos desempenha um papel fundamental na
+                        <u>promoção da saúde e do bem-estar em todas as faixas etárias.</u> Os benefícios de se
+                        exercitar
+                        vão além da simples manutenção do peso corporal, abrangendo diversos aspectos da saúde física,
+                        mental e emocional.
+                        <br><br>
+                        Em primeiro lugar, os exercícios ajudam a fortalecer o sistema cardiovascular, reduzindo o risco
+                        de
+                        doenças cardíacas, pressão alta e acidente vascular cerebral. O aumento da frequência cardíaca
+                        durante o exercício melhora a circulação sanguínea, fornecendo oxigênio e nutrientes essenciais
+                        para
+                        todas as partes do corpo.
+                        <img id="img-dicas" class="img-middle" src="./src/img/img-exercicios-1.jpg"
+                            alt="Uma fotografia com três homens andando de bicicleta ao ar livre.">
+                        <br><br>
+                        Além disso, a prática regular de atividades físicas contribui para o controle do peso corporal,
+                        ajudando na queima de calorias e na manutenção de uma composição corporal saudável. Combinado
+                        com
+                        uma alimentação equilibrada, o exercício pode ser uma ferramenta eficaz para prevenir a
+                        obesidade e
+                        suas complicações associadas, como diabetes tipo 2 e problemas articulares.
+                        <br><br>
+                        Os benefícios dos exercícios também se estendem ao sistema musculoesquelético, fortalecendo
+                        ossos,
+                        músculos e articulações e reduzindo o risco de osteoporose e lesões. Além disso, a prática
+                        regular
+                        de exercícios pode melhorar a flexibilidade, a coordenação e o equilíbrio, o que é especialmente
+                        importante à medida que envelhecemos para prevenir quedas e manter a independência funcional.
+                        <br><br>
+                        No aspecto mental e emocional, <u>os exercícios têm um impacto significativo na saúde do
+                            cérebro,
+                            ajudando a melhorar o humor, reduzir o estresse e a ansiedade, e aumentar a sensação de
+                            bem-estar geral.</u> Durante a prática de atividades físicas, o corpo libera endorfinas,
+                        neurotransmissores responsáveis pela sensação de felicidade e euforia, proporcionando alívio do
+                        estresse e melhorando a saúde mental.
+                        <br><br> <img id="img-dicas" class="bottom-img" src="./src/img/img-exercicios-2.jpg"
+                            alt="Uma fotografia de uma mulher meditando ao ar livre.">
+                        Além disso, o exercício regular pode promover a saúde cognitiva, melhorando a memória, a
+                        concentração e a função cerebral. <u>Estudos mostram que pessoas que se exercitam regularmente
+                            têm
+                            um menor risco de desenvolver doenças neurodegenerativas, como Alzheimer e demência.</u>
+                        <br><br>
+                        Em resumo, <u>fazer exercícios regularmente é essencial para promover a saúde e o bem-estar em
+                            todas
+                            as áreas da vida.</u> Seja qual for o seu nível de condicionamento físico ou idade,
+                        encontrar
+                        uma atividade física que você goste e que se encaixe na sua rotina diária pode trazer inúmeros
+                        benefícios para a sua saúde física, mental e emocional a longo prazo.
+                    </p>
+                </div>
+            </section>
+            <section class="bem-estar" id="bem-estar">
+                <div class="rec-img-txt">
+                    <div class="top-img"></div>
+                    <div class="top-text">
+                        <h1>Cuide de seu bem estar!</h1>
+                    </div>
+                </div>
+                <div class="bem-estar-text">
+                    <p>
+
+                        <strong>O</strong> bem-estar é um estado de equilíbrio e harmonia entre diferentes aspectos da
+                        nossa
+                        vida, incluindo físico, mental, emocional e social. É uma sensação de satisfação e realização
+                        que
+                        resulta de cuidar de nós mesmos e viver em consonância com nossos valores e objetivos.
+                        <br><br> <img id="img-dicas" class="img-middle" src="./src/img/img-bem-estar-1.jpg"
+                            alt="Uma fotografia de um vaso de planta em uma mesa com um livro ao lado.">
+                        No aspecto físico, o bem-estar envolve cuidar do nosso corpo através de hábitos saudáveis, como
+                        <u>alimentação equilibrada, exercícios regulares, sono adequado e evitar hábitos
+                            prejudiciais</u>,
+                        como tabagismo e consumo excessivo de álcool. Quando nos sentimos bem fisicamente, estamos mais
+                        aptos a enfrentar os desafios do dia a dia e desfrutar da vida ao máximo.
+                        <br><br> <img id="img-dicas" class="img-top" src="./src/img/img-bem-estar-1.jpg"
+                            alt="Uma fotografia de um vaso de planta em uma mesa com um livro ao lado.">
+
+                        Além disso, o bem-estar mental é essencial para uma vida plena e satisfatória. Isso envolve
+                        cultivar
+                        uma mente tranquila e resiliente, desenvolvendo habilidades de enfrentamento saudáveis para
+                        lidar
+                        com o estresse e as adversidades da vida. Práticas como <u>meditação, <a
+                                style="color: #82f582; border-bottom: 2px solid #82f582;" href="#rodape">
+                                mindfulness¹.</a> e terapia</u>
+                        podem ajudar a promover o equilíbrio emocional e a reduzir a ansiedade e a depressão.
+                        <br><br>
+                        O bem-estar emocional também é crucial para uma vida feliz e satisfatória. Isso significa estar
+                        em
+                        sintonia com nossas emoções, expressá-las de forma saudável e construir relacionamentos
+                        positivos e
+                        significativos com os outros. Ter um sistema de apoio forte e saber quando pedir ajuda são
+                        aspectos
+                        importantes do bem-estar emocional.
+                        <br><br> <img id="img-dicas" class="bottom-img" src="./src/img/img-bem-estar2.jpg"
+                            alt="Uma fotografia de uma mulher se alongando ao ar livre.">
+                        Além disso, o bem-estar social refere-se à qualidade dos nossos relacionamentos e conexões com
+                        os
+                        outros. Manter laços sociais saudáveis, cultivar amizades e participar de atividades
+                        comunitárias
+                        são maneiras de promover o bem-estar social e sentir-se parte de algo maior do que nós mesmos.
+                        <br><br>
+                        Por fim, o bem-estar espiritual diz respeito ao nosso sentido de propósito e significado na
+                        vida.
+                        Isso pode incluir conexões com valores pessoais, práticas espirituais, criatividade e uma
+                        sensação
+                        de conexão com algo maior do que nós mesmos.
+                        <br><br>
+                        Em resumo, o bem-estar é um estado de <u>equilíbrio e harmonia em todas as áreas da nossa
+                            vida.</u>
+                        Cuidar de nós mesmos em níveis físico, mental, emocional, social e espiritual nos ajuda a viver
+                        com
+                        mais plenitude, felicidade e realização.
+                    </p>
+
+                    <div id="rodape" class="rodape">
+                        <h2 class="rodape-h2">Notas de Rodapé:</h2>
+                        <ul class="ul-rodape">
+                            <li id="mindfulness-index" class="li-rodape"><b>Mindfulness¹</b>:
+                                Mindfulness é a prática de estar totalmente presente no momento, observando pensamentos,
+                                sentimentos e sensações sem julgá-los. Essa técnica é usada para reduzir o estresse e
+                                melhorar o bem-estar.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <footer class="footer">
+            <div class="logo-rodape">
+                <div class="logo-rodape-img">
+                    <img src="./src/img/logo-noline-branco.png"
+                        alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                </div>
+                <div class="viva-content">
+                    <h1 class="viva">
+                        <a href="index.html" target="_self">VIVA +</a>
+                    </h1>
+                </div>
+            </div>
+            <h2 class="footer-h2">
+                Um site feito com HTML, CSS e JavaScript!
+            </h2>
+            <h4>
+                Criado por Danniel Vasconcellos Costa Lucas
+            </h4>
+
+            <div class="credits">
+                <h2><u>Créditos</u></h2>
+                <h3>Sites onde Imagens e Referências foram usadas durante o desenvolvimento do projeto.</h3>
+                <div id="credits-links" class="credits-links">
+                    <div class="img-credits">
+                        <h2 class="img-credits-h2">Imagens:</h2>
+                        <ul class="ul-credits">
+                            <li class="li-credits">Pexels: <a target="_blank"
+                                    href="https://www.pexels.com/pt-br/">https://www.pexels.com/pt-br/</a> </li>
+                            <li class="li-credits">Pixabay: <a target="_blank"
+                                    href="https://pixabay.com/pt/">https://pixabay.com/pt/</a> </li>
+                            <li class="li-credits">Flaticon: <a target="_blank"
+                                    href="https://www.flaticon.com/br/">https://www.flaticon.com/br/</a> </li>
+                        </ul>
+                    </div>
+                    <div class="ref-credits">
+                        <h2 class="ref-credits-h2">Referências:</h2>
+                        <ul class="ul-credits">
+                            <li class="li-credits">Alura: <a target="_blank"
+                                    href="https://cursos.alura.com.br/forum/topico-criei-um-calculadora-de-imc-para-meu-site-com-essa-aula-de-js-236049">https://cursos.alura.com.br/forum/topico-criei-um-calculadora-de-imc-para-meu-site-com-essa-aula-de-js-236049</a>
+                            </li>
+                            <li class="li-credits">Autor do código original (IMC): <a target="_blank"
+                                    href="https://cursos.alura.com.br/user/jc-px-alura">https://cursos.alura.com.br/user/jc-px-alura</a>
+                            </li>
+                            <li class="li-credits">W3Schools: <a target="_blank"
+                                    href="https://www.w3schools.com">https://www.w3schools.com</a> </li>
+                            <li class="li-credits">w3newbie (Image Slider): <a target="_blank"
+                                    href="https://www.youtube.com/watch?v=qDww4CbxtD4">https://www.youtube.com/watch?v=qDww4CbxtD4</a>
+                            </li>
+
+                            <li class="li-credits">Web Dev Simplified (Menu de Hamburger): <a target="_blank"
+                                    href="https://www.youtube.com/watch?v=dAIVbLrAb_U&t=404s">https://www.youtube.com/watch?v=dAIVbLrAb_U&t=404s</a>
+                            </li>
+
+                            <li class="li-credits">Google Fonts: <a target="_blank"
+                                    href="https://fonts.google.com">https://fonts.google.com</a> </li>
+
+
+                            <li class="li-credits">Kevin Powell (Scrollbar): <a target="_blank"
+                                    href="https://www.youtube.com/watch?v=lvKK2fs6h4I&t=607s">https://www.youtube.com/watch?v=lvKK2fs6h4I&t=607s</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nao-me-processa-por-favor">
+                <p> Este projeto foi criado exclusivamente para fins educacionais e de autoaprendizagem. Não tenho a
+                    intenção de obter lucro, enganar ou difamar qualquer pessoa ou entidade. Todo o conteúdo, incluindo
+                    imagens e referências, foi utilizado com respeito aos direitos dos autores originais.</p>
+                <p>Obrigado pela sua atenção. Eu te desejo um ótimo dia 💚</p>
+                <b style="color: white;">© Todos os direitos reservados</b>
+            </div>
+        </footer>
+        <a href="#" class="logo-scroll" target="_self">
+            <img style="width: 75px" src="./src/img/logo.png"
+                alt="Um desenho de uma cabeça com folhas saindo para fora.">
+        </a>
+    </div>
+
+    <script src="./src/js/script.js">
+
+    </script>
+</body>
+
+</html>
