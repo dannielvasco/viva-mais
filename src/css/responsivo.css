@@ -146,6 +146,7 @@
         float: none;
         display: flex;
         align-items: center;
+        justify-content: center;
         margin: auto auto;
         width: 580px;
         margin-bottom: 5rem;
