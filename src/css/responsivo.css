@@ -715,11 +715,16 @@
         margin-inline: 1rem;
     }
 
+    .recomendacoes .rec-img-txt .top-img {
+        height: 50rem;
+    }
+
     .recomendacoes .rec-img-txt {
         height: 50rem;
     }
 
     .recomendacoes .top-text {
+
         max-height: 50%;
 
     }

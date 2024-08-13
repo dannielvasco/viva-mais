@@ -35,7 +35,7 @@ function sortearDitados() {
 sortearDitados();
 
 function ditadosTransition() {
-    ditados.style.transform = "translateX(200%)";
+    ditados.style.transform = "translateX(203%)";
     ditados.style.transition = "all 2s";
 }
 
@@ -76,17 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function calcularIMC(event) {
-    event.preventDefault();
-    var form = document.querySelector("#form");
+// function calcularIMC(event) {
+//     event.preventDefault();
+//     var form = document.querySelector("#form");
 
-    var peso = form.peso.value;
-    var altura = form.altura.value.replace(',', '.');
-    var imc = (peso / (altura * altura)).toFixed(2);
+//     var peso = form.peso.value;
+//     var altura = form.altura.value.replace(',', '.');
+//     var imc = (peso / (altura * altura)).toFixed();
 
-    var resultadoIMC = document.querySelector("#resultado-imc");
-    resultadoIMC.textContent = imc;
-}
+//     var resultadoIMC = document.querySelector("#resultado-imc");
+//     resultadoIMC.textContent = imc;
+// }
 
 var data = new Date()
 var dataBR = data.toLocaleString('pt-br', { dateStyle: 'short' });
@@ -105,7 +105,7 @@ function calculaImc(event) {
     var idade = form.idade.value;
     var peso = form.peso.value.replace(',', '.');
     var altura = form.altura.value.replace(',', '.');
-    var imc = (peso / (altura * altura)).toFixed(2);
+    var imc = (peso / (altura * altura)).toFixed(1);
 
     var resultadoIMC = document.querySelector(".resultado-do-imc");
     var resultado = document.querySelector(".resultado");
@@ -186,13 +186,13 @@ document.addEventListener('click', () => {
         altura.value = valor;
     });
 
-    peso.addEventListener('input', () => {
-        let valorPeso = peso.value.replace(/\D/g, '');
-        if (valorPeso.length >= 3) {
-            valorPeso = valorPeso.slice(0, -1) + ',' + valorPeso.slice(-1);
-        }
-        peso.value = valorPeso;
-    });
+    // peso.addEventListener('input', () => {
+    //     let valorPeso = peso.value.replace(/\D/g, '');
+    //     if (valorPeso.length >= 3) {
+    //         valorPeso = valorPeso.slice(0, -1) + ',' + valorPeso.slice(-1);
+    //     }
+    //     peso.value = valorPeso;
+    // });
 
     peso.addEventListener('input', function () {
         const numeroVirgula = /^[0-9]*,?[0-9]*$/;
@@ -252,22 +252,22 @@ function corBgImc(imc) {
     if (imc < 16) {
         cor = "purple";
     }
-    if (imc > 16 && imc <= 16.9) {
+    if (imc > 16 && imc <= 17) {
         cor = "red";
     }
     if (imc >= 17 && imc <= 18.5) {
         cor = "#FFB74D";
     }
-    if (imc >= 18.5 && imc <= 24.9) {
+    if (imc >= 18.5 && imc <= 25) {
         cor = "#27CF72";
     }
-    if (imc >= 25 && imc <= 29.9) {
+    if (imc >= 25 && imc <= 30) {
         cor = "#F4C430";
     }
-    if (imc >= 30 && imc <= 34.9) {
+    if (imc >= 30 && imc <= 35) {
         cor = "#FFB74D";
     }
-    if (imc >= 35 && imc <= 39.9) {
+    if (imc >= 35 && imc <= 40) {
         cor = "red";
     }
     if (imc >= 40) {
@@ -282,22 +282,22 @@ function classificacaoImc(imc) {
     if (imc < 16) {
         classificacao = "Abaixo do Peso Grau III (Grave)";
     }
-    if (imc > 16 && imc <= 16.9) {
+    if (imc > 16 && imc <= 17) {
         classificacao = "Abaixo do Peso Grau II (Moderado)";
     }
-    if (imc >= 17 && imc <= 18.4) {
+    if (imc >= 17 && imc <= 18.5) {
         classificacao = "Abaixo do Peso Grau I (Leve)"
     }
-    if (imc >= 18.5 && imc <= 24.9) {
+    if (imc >= 18.5 && imc <= 25) {
         classificacao = "Peso Normal"
     }
-    if (imc >= 25 && imc <= 29.9) {
+    if (imc >= 25 && imc <= 30) {
         classificacao = "Sobrepeso"
     }
-    if (imc >= 30 && imc <= 34.9) {
+    if (imc >= 30 && imc <= 35) {
         classificacao = "Obesidade Grau I"
     }
-    if (imc >= 35 && imc <= 39.9) {
+    if (imc >= 35 && imc <= 40) {
         classificacao = "Obesidade Grau II"
     }
     if (imc >= 40) {
@@ -312,22 +312,22 @@ function classificacaoCor(imc) {
     if (imc < 16) {
         classificacaoCor = "yellow";
     }
-    if (imc > 16 && imc <= 16.9) {
+    if (imc > 16 && imc <= 17) {
         classificacaoCor = "#6A5ACD";
     }
-    if (imc >= 17 && imc <= 18.4) {
+    if (imc >= 17 && imc <= 18.5) {
         classificacaoCor = "green";
     }
-    if (imc >= 18.5 && imc <= 24.9) {
+    if (imc >= 18.5 && imc <= 25) {
         classificacaoCor = "white";
     }
-    if (imc >= 25 && imc <= 29.9) {
+    if (imc >= 25 && imc <= 30) {
         classificacaoCor = "red";
     }
-    if (imc >= 30 && imc <= 34.9) {
+    if (imc >= 30 && imc <= 35) {
         classificacaoCor = "green";
     }
-    if (imc >= 35 && imc <= 39.9) {
+    if (imc >= 35 && imc <= 40) {
         classificacaoCor = "#6A5ACD";
     }
     if (imc >= 40) {
