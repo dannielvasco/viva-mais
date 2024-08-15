@@ -76,18 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// function calcularIMC(event) {
-//     event.preventDefault();
-//     var form = document.querySelector("#form");
-
-//     var peso = form.peso.value;
-//     var altura = form.altura.value.replace(',', '.');
-//     var imc = (peso / (altura * altura)).toFixed();
-
-//     var resultadoIMC = document.querySelector("#resultado-imc");
-//     resultadoIMC.textContent = imc;
-// }
-
 var data = new Date()
 var dataBR = data.toLocaleString('pt-br', { dateStyle: 'short' });
 // var dataBR = data.toLocaleString('pt-br', { dateStyle: 'short' }) + ' | ' + "Horas: " + data.toLocaleTimeString(); DATA + HORAS Descartado

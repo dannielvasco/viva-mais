@@ -499,6 +499,10 @@
     #imc .main-section .resultado {
         width: 100%;
     }
+
+    #imc .main-section #toggleButton {
+        margin: 3rem auto;
+    }
 }
 
 /* sm */
@@ -632,6 +636,10 @@
 
     .header h4 {
         font-size: larger;
+    }
+
+    .header .headline .line-detail {
+        display: flex;
     }
 
     .img-h-0,
@@ -1074,6 +1082,11 @@
         padding-block: auto;
     }
 
+    #mental-inside .img-container #img-middle {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
     br {
         display: none;
     }
@@ -1193,6 +1206,8 @@
 
     #imc #main-section .historico h1 {
         width: 80%;
+        border-bottom: none;
+        text-decoration: underline #68FF98;
     }
 }
 
@@ -1260,14 +1275,11 @@
 
     #img-pos {
         position: absolute;
-        left: -26px;
-        /* FINALMENTE */
     }
 
 
     #inside #img-middle {
-        max-width: 125%;
-        margin-left: -24px;
+        max-width: 100%;
     }
 
 
@@ -1276,12 +1288,6 @@
     #img-pos,
     #img-middle {
         max-width: 100%;
-    }
-
-    #img-imc {
-        max-width: 120%;
-        margin-left: -24px;
-        margin-bottom: 3rem;
     }
 
     .recomendacoes .rec-img-txt {
@@ -1354,5 +1360,12 @@
         text-align: left;
     }
 
+    
+    #imc .imc-text #img-imc {
+        margin-bottom: 3rem;
+        width: 120%;
+        margin-inline: auto;
+        margin-left: -22.5px;
+    }
 
 }
