@@ -1,4 +1,8 @@
-var ditados = document.querySelector('#ditados');
+// window.addEventListener('load', function() {
+//     document.getElementById('slider').scrollIntoView({ behavior: 'smooth' });
+//   });
+
+var ditados = document.querySelector('.ditados');
 var asterisk = document.querySelector(".ditados span");
 var h3 = document.querySelector(".ditados h3");
 
@@ -35,7 +39,7 @@ function sortearDitados() {
 sortearDitados();
 
 function ditadosTransition() {
-    ditados.style.transform = "translateX(203%)";
+    ditados.style.transform = "translateX(0%)";
     ditados.style.transition = "all 2s";
 }
 
@@ -94,6 +98,12 @@ function calculaImc(event) {
     var peso = form.peso.value.replace(',', '.');
     var altura = form.altura.value.replace(',', '.');
     var imc = (peso / (altura * altura)).toFixed(1);
+    var imcAlvo = 25;
+    var pesoAlvo = imcAlvo * (altura * altura);
+    var pesoPredestinado = (peso - pesoAlvo).toFixed(1);
+
+
+    var pesoIdeal = document.querySelector(".imc-alvo");
 
     var resultadoIMC = document.querySelector(".resultado-do-imc");
     var resultado = document.querySelector(".resultado");
@@ -101,6 +111,8 @@ function calculaImc(event) {
     var resultadoIMCDenovo = document.querySelector(".resultado-denovo");
     resultadoIMC.textContent = imc;
     resultadoIMCDenovo.textContent = "Seu IMC é de: " + imc + "!";
+
+    // pesoIdeal.textContent = "Peso a ser perdido: " + pesoPredestinado + "kg";
 
 
     localStorage.setItem("nome", nome);
@@ -138,6 +150,14 @@ function calculaImc(event) {
         resultadoIMC.textContent = "Coloque um valor válido!"
         resultadoIMCDenovo.textContent = "Coloque sua altura"
     }
+
+    // if (imc >= 18.5 && imc <= 25) {
+    //     pesoIdeal.textContent =  "Você não precisa perder mais peso!"
+    // } else {
+    //     pesoPredestinado;
+    // }
+
+  
 
     // var valorMaximo = 300;
 
@@ -478,3 +498,45 @@ window.onload = function () {
     carregarConteudo();
     carregarInfo();
 };
+
+
+//DESCARTADO
+
+// const bookMark = document.querySelector(".bookmark");
+// const navbar = document.querySelector(".navbar");
+// const topNavbar = document.querySelector(".top-navbar");
+
+
+// function addNavbar() {
+//     bookMark.addEventListener('click', () => {
+//         navbar.classList.toggle("add-bar");
+//     });
+// }
+
+// function addTopNavbar() {
+//     bookMark.addEventListener('click', () => {
+//         topNavbar.classList.toggle("add-bar");
+//     });
+// }
+
+// addNavbar();
+// addTopNavbar();
+
+
+// function navBarSelection(largura) {
+//     if (largura.matches) {
+//         // DEFINITIVAMENTE MENOR OU IGUAL
+//         navbar.classList.add("remove-bar");
+//     } else {
+//         // DEFINITIVAMENTE MAIOR
+//         navbar.classList.remove("remove-bar");
+//     }
+// }
+
+// var largura = window.matchMedia("(max-width: 768px)")
+
+// navBarSelection(largura);
+
+// largura.addEventListener("change", function () {
+//     navBarSelection(largura);
+// });

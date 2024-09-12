@@ -47,6 +47,7 @@
             background-size: cover;
             height: 500%;
             animation: 20s slider infinite;
+            overflow: hidden;
         }
 
         #slider figure img {
@@ -93,6 +94,69 @@
                 left: -400%;
             }
         }
+
+        #slider-small {
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #slider-small figure {
+            position: relative;
+            width: 501%;
+            margin: 0;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500%;
+            animation: 20s slider infinite;
+            overflow: hidden;
+        }
+
+        #slider-small figure img {
+            float: left;
+            width: 20%;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+
+        @keyframes slider-small {
+            0% {
+                left: 0;
+            }
+
+            20% {
+                left: 0;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+        }
     </style>
 </head>
 
@@ -100,7 +164,7 @@
     <div class="container">
         <nav class="top-navbar">
 
-            <div class="top-logo-content">
+            <!-- <div class="top-logo-content">
                 <div class="top-img-logo">
                     <img src="./src/img/logo.png" alt="Um desenho de uma cabeça com folhas saindo para fora.">
                 </div>
@@ -113,31 +177,38 @@
                     </h1>
 
                 </div>
+            </div> -->
+
+            <div class="circulo-container">
+                <div class="circulo">
+                    <a href="index.html">
+                        <h1>
+                            <div class="invis-bg">V</div>IVA +
+                        </h1>
+
+                        <h2 class="h2-top-navbar">
+                            <div class="invis-bg">V</div>IVA +
+                        </h2>
+                        <img title="Ir Para Página Principal" src="./src/img/logo-branco.png"
+                            alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                    </a>
+                </div>
             </div>
 
-
-            <div class="phone-navbar">
-                <a href="#" target="_blank">
-                    <img src="./src/img/telefone-colorido.png" alt="Um desenho de um telefone.">
-                    <img class="over-phone" src="./src/img/telefone-colorido-branco.png">
-            </div>
-            <div class="phone-txt">
-                XX XX XXXXX-XXXX
-            </div>
-            </a>
-
-            <div class="asterisk-back-space">
-                <span class="material-symbols-outlined asterisk">
-                    asterisk
-                </span>
-            </div>
-            <div onclick="ditadosChange()" class="ditados">
-                <u id="ditados"></u>
-                <button>
-                    <!-- <span onclick="ditadosChange()" class="material-symbols-outlined arrow">
+            <div class="ditados-container">
+                <div class="asterisk-back-space">
+                    <span class="material-symbols-outlined asterisk">
+                        asterisk
+                    </span>
+                </div>
+                <div onclick="ditadosChange()" class="ditados">
+                    <u id="ditados"></u>
+                    <button>
+                        <!-- <span onclick="ditadosChange()" class="material-symbols-outlined arrow">
                     chevron_right
                     </span>
                 </button> -->
+                </div>
             </div>
 
             <div class="ícones-navbar">
@@ -200,11 +271,13 @@
 
 
                     <div class="sidebar-outro">
+                        <a target="_self" href="./outro.html" class="btn-title">
                         <button class="sidebar-btn"> <span class="material-symbols-outlined btn-icon new-page">
                                 open_in_new
                             </span>
-                            <a target="_self" href="./outro.html" class="btn-title">Outro</a>
+                           Outro
                         </button>
+                    </a>
 
                         <!-- <ul id="outro-li" class="btn-li">
                             <li><a href="./outro.html#mental">Saúde Mental</a></li>
@@ -219,7 +292,20 @@
         </nav>
         <nav class="navbar">
 
-            <a class="logo-link" target="_self" href="index.html">
+            <div class="circulo-container">
+                <div class="circulo">
+                    <a href="index.html">
+                        <h1>
+                            <div class="invis-bg">V</div>IVA +
+                        </h1>
+                        <img title="Ir Para Página Principal" src="./src/img/logo-branco.png"
+                            alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- <a class="logo-link" target="_self" href="index.html">
                 <div class="logo-content">
 
                     <div class="img-logo">
@@ -234,12 +320,13 @@
                         </h1>
                     </div>
                 </div>
-            </a>
+            </a> -->
+
 
 
             <div class="menu">
                 <div class="dropdown">
-                    <a target="_self" href="#cuide-se" class="dropbtn">Saúde</a>
+                    <a target="_self" href="#cuide-se" id="dropbtn-menu" class="dropbtn">Saúde</a>
                     <div class="dropdown-content" id="drop-cont">
                         <a href="#cuide-se" target="_self">Introdução</a>
                         <a href="#ar-livre" target="_self">Ar Livre</a>
@@ -248,7 +335,7 @@
                 </div>
 
                 <div class="dropdown-dicas">
-                    <a target="_self" href="#dicas" class="dropbtn-dicas">Dicas</a>
+                    <a target="_self" href="#dicas" id="dropbtn-menu" class="dropbtn-dicas">Dicas</a>
                     <div class="dropdown-dicas-content" id="drop-cont">
                         <a href="#alimentacao">Alimentação</a>
                         <a href="#exercicios">Exercícios</a>
@@ -257,8 +344,8 @@
                 </div>
 
                 <div class="dropdown-saiba-mais">
-                    <a href="./outro.html" target="_self" class="dropbtn-saiba-mais"> <img class="outside-page"
-                            src="./src/img/outside-page.svg"
+                    <a href="./outro.html" id="dropbtn-menu" target="_self" class="dropbtn-saiba-mais"> <img
+                            class="outside-page" src="./src/img/outside-page.svg"
                             alt="Um desenho que indica que você irá sair do site ao clicar."> Saiba
                         Mais</a>
                     <div class="dropdown-saiba-mais-content" id="drop-cont">
@@ -270,6 +357,16 @@
             </div>
         </nav>
         <header class="header">
+
+            <!-- <div title="Acessar | Fechar a barra de navegação" class="bookmark">
+                <button class="bookmark-btn">
+                    <img src="./src/img/bookmark-colorido-bright.png" alt="Ícone de uma marcação de livro">
+                </button>
+                <button class="bookmark-btn bookmark-btn-over">
+                    <img src="./src/img/bookmark-over.png" alt="Ícone de uma marcação de livro">
+                </button>
+            </div> -->
+
             <div class="headline">
                 <h2>
                     Seja bem-vindo(a) ao meu site de saúde e bem-estar!
@@ -277,9 +374,41 @@
                     Aqui, você encontrará dicas e recomendações para
                     ter uma melhor qualidade de vida.
                 </h2>
-                <h4>
-                    Descubra o caminho para uma vida saudável e equilibrada. Bem-estar em primeiro lugar.
-                </h4>
+                <!-- <h4>
+                     Descubra o caminho para uma vida saudável e equilibrada. <span class="headline-h4-span"> Bem-estar em primeiro lugar. </span>
+                </h4> -->
+                <button class="intro-btn">
+                    <a href="#cuide-se" target="_self">Começar!</a>
+                </button>
+
+                <!-- <div class="stickers" id="stickers">
+                    <div class="sticker-section">
+                        <a title="Dicas" href="index.html#dicas">
+                            <img class="sparkle" src="./src/img/header-shiny-branco.png"
+                                alt="Um pequeno desenho de múltiplos brilhos de luz">
+                            <img class="sticker-img um" src="./src/img/header-sticker-custom-alt.png"
+                                alt="Um pequeno desenho de uma mão segurando um Dumbell (halter, peso de academia)">
+                        </a>
+                    </div>
+
+                    <div class="sticker-section dois">
+                        <a title="Saúde Mental" href="outro.html#mental">
+                            <img class="sparkle" src="./src/img/header-shiny-branco.png"
+                                alt="Um pequeno desenho de múltiplos brilhos de luz">
+                            <img class="sticker-img dois" src="./src/img/header-sticker-custom-1.png"
+                                alt="Um pequeno desenho de um cérebro cercado de flores">
+                        </a>
+                    </div>
+
+                    <div class="sticker-section">
+                        <a title="Introdução" href="index.html#cuide-se">
+                            <img class="sparkle" src="./src/img/header-shiny-branco.png"
+                                alt="Um pequeno desenho de múltiplos brilhos de luz">
+                            <img class="sticker-img tres" src="./src/img/header-sticker-custom-2.png"
+                                alt="Um pequeno desenho de uma cesta com frutas">
+                        </a>
+                    </div>
+                </div> -->
             </div>
 
             <div id="slider">
@@ -289,6 +418,16 @@
                     <img class="img-h-2" src="./src/img/img-headline-2.jpg">
                     <img class="img-h-3" src="./src/img/img-headline-3.jpg">
                     <img class="img-h-4" src="./src/img/img-headline.jpg">
+                </figure>
+            </div>
+
+            <div id="slider-small">
+                <figure>
+                    <img class="img-h-0" src="./src/img/img-headersmall-0.jpg">
+                    <img class="img-h-1" src="./src/img/img-headersmall-1.jpg">
+                    <img class="img-h-2" src="./src/img/img-headersmall-2.jpg">
+                    <img class="img-h-2" src="./src/img/img-headersmall-3.jpg">
+                    <img class="img-h-2" src="./src/img/img-headersmall-0.jpg">
                 </figure>
             </div>
         </header>
@@ -416,9 +555,12 @@
             </div>
 
             <div class="recomendacoes" id="recomendacoes">
-                <div class="rec-img-txt">
-                    <div class="top-img" style="filter: blur(2px);">
+                <div class="recomendacoes-header">
+                  
+                    <div id="recomendacoes-img">
+                            <img class="recomendacoes-fundo" src="./src/img/img-recomendacoes.jpg" alt="Uma fotografia de uma mulher correndo ao ar livre">
                     </div>
+
                     <div class="top-text">
                         <h1>
                             O que fazer para cuidar da saúde?
@@ -482,12 +624,16 @@
                 </ol>
 
             </div>
-
         </section>
+
         <section class="dicas" id="dicas">
             <section class="alimentacao" id="alimentacao">
-                <div class="rec-img-txt">
-                    <div class="top-img"></div>
+                <div class="rec-img-txt" id="header-content">
+
+                    <div class="top-img" id="top-header-img">
+                        <img src="./src/img/img-alimentacao.jpg" alt="">
+                    </div>
+                    
                     <div class="top-text">
                         <h1>Como ter uma alimentação saudável?</h1>
                     </div>
@@ -563,8 +709,10 @@
                 </div>
             </section>
             <section class="exercicios" id="exercicios">
-                <div class="rec-img-txt">
-                    <div class="top-img"></div>
+                <div class="rec-img-txt" id="header-content">
+                    <div class="top-img" id="top-header-img">
+                        <img src="./src/img/img-exercicios.jpg" alt="">
+                    </div>
                     <div class="top-text">
                         <h1>Bora se exercitar? 💪</h1>
                     </div>
@@ -625,8 +773,10 @@
                 </div>
             </section>
             <section class="bem-estar" id="bem-estar">
-                <div class="rec-img-txt">
-                    <div class="top-img"></div>
+                <div class="rec-img-txt" id="header-content">
+                    <div class="top-img" id="top-header-img">
+                        <img src="./src/img/img-bem-estar.jpg" alt="">
+                    </div>
                     <div class="top-text">
                         <h1>Cuide de seu bem estar!</h1>
                     </div>
@@ -783,7 +933,6 @@
     </div>
 
     <script src="./src/js/script.js">
-
     </script>
 </body>
 

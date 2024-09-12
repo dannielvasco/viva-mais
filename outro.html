@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./src/css/responsivo.css">
     <link rel="stylesheet" href="./src/css/division.css">
     <link rel="stylesheet" href="./src/css/outro-style.css">
+    <link rel="stylesheet" href="./src/css/imc.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
@@ -88,6 +89,69 @@
                 left: -400%;
             }
         }
+
+        #slider-small {
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #slider-small figure {
+            position: relative;
+            width: 501%;
+            margin: 0;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500%;
+            animation: 20s slider infinite;
+            overflow: hidden;
+        }
+
+        #slider-small figure img {
+            float: left;
+            width: 20%;
+            filter: blur(3px);
+            -webkit-filter: blur(3px);
+        }
+
+        @keyframes slider-small {
+            0% {
+                left: 0;
+            }
+
+            20% {
+                left: 0;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+        }
     </style>
 </head>
 
@@ -95,7 +159,7 @@
     <div class="container">
         <nav id="top-navbar" class="top-navbar">
 
-            <div id="top-logo-content" class="top-logo-content">
+            <!-- <div id="top-logo-content" class="top-logo-content">
                 <div class="top-img-logo">
                     <img src="./src/img/logo.png" alt="Um desenho de uma cabeça com folhas saindo para fora.">
                 </div>
@@ -107,31 +171,38 @@
                         </a>
                     </h1>
                 </div>
+            </div> -->
+
+            <div id="circulo-container" class="circulo-container">
+                <div class="circulo">
+                    <a href="index.html">
+                        <h1>
+                            <div class="invis-bg">V</div>IVA +
+                        </h1>
+
+                        <h2 class="h2-top-navbar">
+                            <div class="invis-bg">V</div>IVA +
+                        </h2>
+                        <img title="Ir Para Página Principal" src="./src/img/logo-branco.png"
+                            alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                    </a>
+                </div>
             </div>
 
-
-            <div class="phone-navbar">
-                <a href="#" target="_blank">
-                    <img src="./src/img/telefone-colorido.png" alt="Desenho de um telefone.">
-                    <img class="over-phone" src="./src/img/telefone-colorido-branco.png">
-            </div>
-            <div class="phone-txt">
-                XX XX XXXXX-XXXX
-            </div>
-            </a>
-
-            <div class="asterisk-back-space" id="asterisk-back-space">
-                <span class="material-symbols-outlined asterisk">
-                    asterisk
-                </span>
-            </div>
-            <div onclick="ditadosChange()" class="ditados">
-                <u id="ditados"></u>
-                <button>
-                    <!-- <span onclick="ditadosChange()" class="material-symbols-outlined arrow">
+            <div class="ditados-container">
+                <div class="asterisk-back-space" id="asterisk-back-space">
+                    <span class="material-symbols-outlined asterisk">
+                        asterisk
+                    </span>
+                </div>
+                <div onclick="ditadosChange()" class="ditados">
+                    <u id="ditados"></u>
+                    <button>
+                        <!-- <span onclick="ditadosChange()" class="material-symbols-outlined arrow">
                     chevron_right
                     </span>
                 </button> -->
+                </div>
             </div>
 
             <div id="ícones-navbar" class="ícones-navbar">
@@ -179,12 +250,13 @@
 
 
                     <div class="sidebar-home">
-                        <button class="sidebar-btn"> <span class="material-symbols-outlined btn-icon home">
-                                home
-                            </span>
-                            <a target="_self" href="./index.html" class="btn-title">Voltar</a>
-                        </button>
-
+                        <a target="_self" href="./index.html" class="btn-title">
+                            <button class="sidebar-btn"> <span class="material-symbols-outlined btn-icon home">
+                                    home
+                                </span>
+                                Voltar
+                            </button>
+                        </a>
                     </div>
 
 
@@ -192,19 +264,17 @@
             </aside>
         </nav>
         <nav class="navbar">
-            <a href="index.html" target="_self">
-                <div class="logo-content">
-                    <div class="img-logo">
-                        <img src="./src/img/logo.png" alt="íUm desenho de uma cabeça com folhas saindo para fora.">
-                    </div>
-
-                    <div class="logo">
+            <div class="circulo-container">
+                <div class="circulo">
+                    <a href="index.html">
                         <h1>
-                            VIVA +
+                            <div class="invis-bg">V</div>IVA +
                         </h1>
-                    </div>
+                        <img title="Ir Para Página Principal" src="./src/img/logo-branco.png"
+                            alt="Um desenho de uma cabeça com folhas saindo para fora.">
+                    </a>
                 </div>
-            </a>
+            </div>
 
 
 
@@ -252,10 +322,12 @@
                     Aqui, você encontrará dicas e recomendações para
                     ter uma melhor qualidade de vida.
                 </h2>
-
-                <h4>
-                    Descubra o caminho para uma vida saudável e equilibrada. Bem-estar em primeiro lugar.
-                </h4>
+                <!-- <h4>
+                     Descubra o caminho para uma vida saudável e equilibrada. <span class="headline-h4-span"> Bem-estar em primeiro lugar. </span>
+                </h4> -->
+                <button class="intro-btn">
+                    <a href="#mental" target="_self">Começar!</a>
+                </button>
             </div>
 
             <div id="slider">
@@ -265,6 +337,16 @@
                     <img class="img-h-2" src="./src/img/img-headline-2.jpg">
                     <img class="img-h-3" src="./src/img/img-headline-3.jpg">
                     <img class="img-h-4" src="./src/img/img-headline.jpg">
+                </figure>
+            </div>
+
+            <div id="slider-small">
+                <figure>
+                    <img class="img-h-0" src="./src/img/img-headersmall-0.jpg">
+                    <img class="img-h-1" src="./src/img/img-headersmall-1.jpg">
+                    <img class="img-h-2" src="./src/img/img-headersmall-2.jpg">
+                    <img class="img-h-2" src="./src/img/img-headersmall-3.jpg">
+                    <img class="img-h-2" src="./src/img/img-headersmall-0.jpg">
                 </figure>
             </div>
         </header>
@@ -450,8 +532,11 @@
     </section>
 
     <section class="video" id="video">
-        <div class="rec-img-txt">
-            <div class="top-img" style="filter: blur(2px);"></div>
+        <div class="video-header">
+            <div id="video-img">
+                <img class="video-fundo" src="./src/img/img-video.jpg"
+                    alt="Uma fotografia de um homem se gravando ao ar livre">
+            </div>
             <div class="top-text">
                 <h2>
                     Assista alguns vídeos!
@@ -459,7 +544,7 @@
                 <h4 style="color: white;">
                     Assista alguns vídeos recomendados para se manter ainda mais informado!
                     <br><br>
-                    (Exibição apenas, sem links de fato)
+                    <span class="alerta">(Exibição apenas, sem links de fato)</span>
                 </h4>
             </div>
         </div>
@@ -565,10 +650,12 @@
 
     <section class="finale" id="finale">
         <section class="imc" id="imc">
-            <div class="rec-img-txt">
-                <div class="top-img"></div>
-                <div class="top-text">
-                    <h1>IMC</h1>
+            <div class="rec-img-txt" id="header-content">
+                <div class="top-img" id="top-header-img">
+                    <img src="./src/img/img-imc-capa.jpg" alt="">
+                </div>
+                <div id="imc-top-text" class="top-text">
+                    <h1 id="imc-header-text">IMC</h1>
                     <h4>Saiba o que é e descubra se está no seu peso ideal!</h4>
                 </div>
             </div>
@@ -594,6 +681,7 @@
                     <br><br>
                     As faixas de classificação do IMC geralmente são as seguintes:
                     <br><br>
+                <div id="classificacoes-container" class="classificacoes-container">
                     <span class="classificacoes">
                         <span class="ol-classificacoes"> <u> <span class="abaixo"> Abaixo do peso: </span> IMC abaixo de
                                 18,5</u></span>
@@ -605,14 +693,45 @@
                                 superior</u></span>
                         <span class="ol-classificacoes"> <u> <span class="grave">Obesidade Grave: </span> IMC 40 ou
                                 superior</u></span>
+
                     </span>
-                    <img id="img-imc" class="bottom" src="./src/img/img-imc.png"
-                        alt="Imagem com desenhos indicando as faixas de classificação do IMC.">
-                    <br><br>
-                    No entanto, é importante interpretar o IMC com cautela e considerar outros fatores, como a
-                    composição corporal e a distribuição de gordura, ao avaliar a saúde de alguém. Sempre é aconselhável
-                    consultar um profissional de saúde para uma avaliação mais completa e personalizada.
+                    <!-- <img id="img-imc" class="bottom" src="./src/img/img-imc.png"
+                        alt="Imagem com desenhos indicando as faixas de classificação do IMC."> -->
+
+                    <section id="body-index" class="body-index">
+                        <div id="peso-container" class="peso-container">
+                            <button id="button-normal-left" class="arrow left-arrow"
+                                onclick="pesoAnterior()">&#10094;</button>
+
+                            <button id="button-left" class="arrow left-arrow" onclick="pesoAnterior()">&#10094;</button>
+
+
+                            <div id="peso" class="peso">
+                                <img src="src/img/peso1.png" alt="Peso 1">
+                            </div>
+
+                            <button id="button-normal-right" class="arrow right-arrow"
+                                onclick="proximoPeso()">&#10095;</button>
+
+
+                            <button id="button-right" class="arrow right-arrow"
+                                onclick="proximoPeso()">&#10095;</button>
+
+                        </div>
+
+                        <h2 style="color: #27c8a4;" id="categoria">
+                            Normal
+                        </h2>
+                    </section>
+                </div>
+                No entanto, é importante interpretar o IMC com cautela e considerar outros fatores, como a
+                composição corporal e a distribuição de gordura, ao avaliar a saúde de alguém. Sempre é aconselhável
+                consultar um profissional de saúde para uma avaliação mais completa e personalizada.
                 </p>
+            </div>
+
+
+            <!-- 
                 <div class="division-full">
                     <div class="span-line">
                         <span></span>
@@ -637,60 +756,63 @@
                         <span></span>
                     </div>
 
-                </div>
+                </div> -->
 
-                <section id="main-section" class="main-section">
-                    <h2><u>Calcule seu IMC!</u></h2>
-                    <section id="forms" class="forms">
-                        <form action="" id="calcular-imc" onsubmit="return salvarInfo(event);">
-                            <label for="nomesobrenome"><u>Nome e Sobrenome</u></label>
-                            <input name="nome" type="text" id="nome" class="input-padrao"
-                                placeholder="Digite seu nome (Não obrigatorio)">
+            <section id="main-section" class="main-section">
+                <h2><u>Calcule seu IMC!</u></h2>
+                <section id="forms" class="forms">
+                    <form action="" id="calcular-imc" onsubmit="return salvarInfo(event);">
+                        <label for="nomesobrenome"><u>Nome e Sobrenome</u></label>
+                        <input name="nome" type="text" id="nome" class="input-padrao"
+                            placeholder="Digite seu nome (Não obrigatorio)">
 
-                            <label for="idade"><u>Idade</u></label>
-                            <input maxlength="3" name="idade" type="text" id="idade" class="input-padrao"
-                                placeholder="Digite sua idade (Não obrigatorio)">
+                        <label for="idade"><u>Idade</u></label>
+                        <input maxlength="3" name="idade" type="text" id="idade" class="input-padrao"
+                            placeholder="Digite sua idade (Não obrigatorio)">
 
-                            <label for="peso"><u>Peso</u></label>
-                            <input name="peso" type="text" id="peso" class="input-padrao" required
-                                placeholder="Digite seu peso em kg ex: 65,5">
+                        <label for="peso"><u>Peso</u></label>
+                        <input name="peso" type="text" id="peso" class="input-padrao" required
+                            placeholder="Digite seu peso em kg ex: 65,5">
 
-                            <label for="altura"><u>Altura</u></label>
-                            <input maxlength="3" name="altura" type="text" id="altura" required class="input-padrao"
-                                placeholder="Digite sua altura em cm ex: 173">
+                        <label for="altura"><u>Altura</u></label>
+                        <input maxlength="3" name="altura" type="text" id="altura" required class="input-padrao"
+                            placeholder="Digite sua altura em cm ex: 173">
 
-                            <input type="submit" value="Enviar" class="enviar">
-                        </form>
+                        <input type="submit" href="#resultado-calc" value="Enviar" class="enviar">
+                    </form>
 
-                        <div class="resultado">
-                            <h2 class="resultado-do-imc"> Resultado aqui!
-                            </h2>
-                            <h3 class="resultado-denovo">...</h4>
-                                <h3 class="classificacao-do-imc"></h3>
-                                <h2 class="mensagemErro"></h2>
+                    <div class="resultado">
+                        <h2 id="resultado-calc" class="resultado-do-imc"> Resultado aqui!
+                        </h2>
+                        <h3 class="resultado-denovo">
+                            </h4>
+                            <h3 class="classificacao-do-imc"></h3>
+                            <h2 class="mensagemErro"></h2>
+                            <!-- <h3 class="imc-alvo">
+                                </h3> -->
+                    </div>
 
-                        </div>
 
-
-                    </section>
-                    <div class="historico">
-                        <div class="his-header">
-                            <h2>Histórico
-                            </h2>
-                            <h2>Veja suas últimas alterações!</h2>
-                            <a target="_self" href="#toggleButton" class="material-symbols-outlined history title">
-                                history</a>
-                        </div>
-                        <h1 class="historico-novo"> Informações Atuais</h1>
-                        <div class="historico-content-novo">
-                            <h3 id="imc-data-novo">Data:</h3>
-                            <h3 id="imc-calc-novo">Cálculo de IMC: </h3>
-                            <h3 id="imc-nome-novo">Nome:</h3>
-                            <h3 id="imc-idade-novo">Idade:</h3>
-                            <h3 id="imc-peso-novo">Peso:</h3>
-                            <h3 id="imc-altura-novo">Altura:</h3>
-                        </div>
-                        <div class="division-full">
+                </section>
+                <div class="historico">
+                    <div class="his-header">
+                        <h2>Histórico
+                        </h2>
+                        <h2 class="historico-subtitulo">Veja suas últimas alterações!</h2>
+                        <a id="historico-botao" target="_self" href="#toggleButton"
+                            class="material-symbols-outlined history title">
+                            history</a>
+                    </div>
+                    <h1 class="historico-novo"> Informações Atuais</h1>
+                    <div class="historico-content-novo">
+                        <h3 id="imc-data-novo">Data:</h3>
+                        <h3 id="imc-calc-novo">Cálculo de IMC: </h3>
+                        <h3 id="imc-nome-novo">Nome:</h3>
+                        <h3 id="imc-idade-novo">Idade:</h3>
+                        <h3 id="imc-peso-novo">Peso:</h3>
+                        <h3 id="imc-altura-novo">Altura:</h3>
+                    </div>
+                    <!-- <div class="division-full">
                             <div class="span-line">
                                 <span></span>
                             </div>
@@ -712,22 +834,22 @@
                             <br><br><br>
 
 
-                        </div>
-                        <div class="historico-ultimo-title">
-                            <!-- <span class="material-symbols-outlined asterisk">
+                        </div> -->
+                    <div class="historico-ultimo-title">
+                        <!-- <span class="material-symbols-outlined asterisk">
                                 asterisk
                             </span> -->
-                            <h1 class="historico-ultimo"> Modificações Recentes</h1>
-                        </div>
-                        <div class="historico-content">
-                            <h3 id="imc-data">Última Data:</h3>
-                            <h3 id="imc-calc">Último Cálculo de IMC: </h3>
-                            <h3 id="imc-nome">Nome:</h3>
-                            <h3 id="imc-idade">Idade:</h3>
-                            <h3 id="imc-peso">Peso Anterior:</h3>
-                            <h3 id="imc-altura">Altura Anterior:</h3>
-                        </div>
-                        <div class="division-full">
+                        <h1 class="historico-ultimo"> Modificações Recentes</h1>
+                    </div>
+                    <div class="historico-content">
+                        <h3 id="imc-data">Última Data:</h3>
+                        <h3 id="imc-calc">Último Cálculo de IMC: </h3>
+                        <h3 id="imc-nome">Nome:</h3>
+                        <h3 id="imc-idade">Idade:</h3>
+                        <h3 id="imc-peso">Peso Anterior:</h3>
+                        <h3 id="imc-altura">Altura Anterior:</h3>
+                    </div>
+                    <!-- <div class="division-full">
                             <div class="span-line">
                                 <span></span>
                             </div>
@@ -749,34 +871,35 @@
                             <br><br><br>
 
 
-                        </div>
-                        <div class="historico-all-title">
+                        </div> -->
+                    <div class="historico-all-title">
 
-                            <h1 class="historico-ultimo denovo" id="historico-ultimo">Histórico de Modificações</h1>
+                        <h1 class="historico-ultimo denovo" id="historico-ultimo">Histórico de Modificações</h1>
 
-                            <button id="toggleButton" onclick="exibirInfo()"
-                                class="material-symbols-outlined history button">
-                                history
-                            </button>
+                        <button id="toggleButton" onclick="exibirInfo()"
+                            class="material-symbols-outlined history button">
+                            history
+                        </button>
 
-                            <div id="historico-todo"></div>
-                            <div class="modificacoes-container">
-                                <div class="modificacoes">
-                                </div>
-                                <!-- <div class="sem-dados">Nenhum dado disponível no momento <br> Preencha os campos do <a
-                                        href="#calcular-imc">formulário acima</a> primeiro <br><br> ༼ つ ◕_◕ ༽つ💚.</div> -->
+                        <div id="historico-todo"></div>
+                        <div class="modificacoes-container">
+                            <div class="modificacoes">
                             </div>
-                        </div>
-                        <div id="historico-all" class="historico-content">
-                            <h3 id="imc-data-all">Data:</h3>
-                            <h3 id="imc-calc-all">Cálculo de IMC: </h3>
-                            <h3 id="imc-nome-all">Nome:</h3>
-                            <h3 id="imc-idade-all">Idade:</h3>
-                            <h3 id="imc-peso-all">Peso:</h3>
-                            <h3 id="imc-altura-all">Altura:</h3>
+                            <!-- <div class="sem-dados">Nenhum dado disponível no momento <br> Preencha os campos do <a
+                                        href="#calcular-imc">formulário acima</a> primeiro <br><br> ༼ つ ◕_◕ ༽つ💚.</div> -->
                         </div>
                     </div>
-            </div>
+                    <div id="historico-all" class="historico-content">
+                        <h3 id="imc-data-all">Data:</h3>
+                        <h3 id="imc-calc-all">Cálculo de IMC: </h3>
+                        <h3 id="imc-nome-all">Nome:</h3>
+                        <h3 id="imc-idade-all">Idade:</h3>
+                        <h3 id="imc-peso-all">Peso:</h3>
+                        <h3 id="imc-altura-all">Altura:</h3>
+                    </div>
+                </div>
+
+            </section>
         </section>
     </section>
 
@@ -861,7 +984,15 @@
         <img style="width: 75px" src="./src/img/logo.png" alt="Um desenho de uma cabeça com folhas saindo para fora.">
     </a>
 
+    <!-- <a href="#" class="imc-scroll" target="_self">
+        <h1>IMC</h1>
+    </a> -->
+
     <script src="./src/js/script.js">
+
+    </script>
+
+    <script src="./src/js/imc.js">
 
     </script>
 </body>
