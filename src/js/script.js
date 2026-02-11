@@ -40,7 +40,7 @@ sortearDitados();
 
 function ditadosTransition() {
     ditados.style.transform = "translateX(0%)";
-    ditados.style.transition = "all 2s";
+    ditados.style.transition = "all 2s"; 
 }
 
 ditadosTransition();
